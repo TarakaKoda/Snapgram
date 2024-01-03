@@ -1,23 +1,24 @@
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-
+import Loader from "@/components/shared/Loader";
 import { Button } from "@/components/ui/button";
 import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
+    Form,
+    FormControl,
+    FormField,
+    FormItem,
+    FormLabel,
+    FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { SignUpValidation } from "@/lib/validation";
-import { z } from "zod";
-import Loader from "@/components/shared/Loader";
-import { Link } from "react-router-dom";
+import { useToast } from "@/components/ui/use-toast";
 import { createUserAccount } from "@/lib/appwrite/api";
+import { SignUpValidation } from "@/lib/validation";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import { Link } from "react-router-dom";
+import { z } from "zod";
 
 const SignUpForm = () => {
+  const { toast } = useToast();
   const isLoading = false;
   const form = useForm<z.infer<typeof SignUpValidation>>({
     resolver: zodResolver(SignUpValidation),
@@ -31,10 +32,11 @@ const SignUpForm = () => {
 
   // 2. Define a submit handler.
   async function onSubmit(values: z.infer<typeof SignUpValidation>) {
-     const newUser = await createUserAccount(values);
+    const newUser = await createUserAccount(values);
 
-     console.log(newUser)
-    
+    if (!newUser) return toast({ title: "Sign up failed. Please try again." });
+
+    // const session = await signInAccount()
   }
 
   return (
@@ -113,9 +115,14 @@ const SignUpForm = () => {
               "Sign up"
             )}
           </Button>
-          <p className="text-small-regular text-light-2 text-center mt-2">
+          <p className="text-small-regular mt-2 text-center text-light-2">
             Already have an account?
-            <Link to="/sign-in" className="text-primary-500 text-small-semibold ml-1">Log in</Link>
+            <Link
+              to="/sign-in"
+              className="text-small-semibold ml-1 text-primary-500"
+            >
+              Log in
+            </Link>
           </p>
         </form>
       </div>
