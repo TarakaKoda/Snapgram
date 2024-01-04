@@ -1,9 +1,19 @@
 import { createBrowserRouter } from "react-router-dom";
+import AuthLayout from "./_auth/forms/AuthLayout";
 import SignInForm from "./_auth/forms/SignInForm";
 import SignUpForm from "./_auth/forms/SignUpForm";
-import { Home } from "./_root/pages";
-import AuthLayout from "./_auth/forms/AuthLayout";
 import RootLayout from "./_root/RootLayout";
+import {
+  AllUsers,
+  CreatePost,
+  EditPost,
+  Explore,
+  Home,
+  PostDetails,
+  Profile,
+  Saved,
+  UpdateProfile,
+} from "./_root/pages";
 
 const routes = createBrowserRouter([
   {
@@ -24,8 +34,40 @@ const routes = createBrowserRouter([
     element: <RootLayout />,
     children: [
       {
-        path: "/",
+        index: true,
         element: <Home />,
+      },
+      {
+        path: "/explore",
+        element: <Explore />,
+      },
+      {
+        path: "/saved",
+        element: <Saved />,
+      },
+      {
+        path: "/all-users",
+        element: <AllUsers />,
+      },
+      {
+        path: "/create-post",
+        element: <CreatePost />,
+      },
+      {
+        path: "/update-post/:id",
+        element: <EditPost />,
+      },
+      {
+        path: "/post/:id",
+        element: <PostDetails />,
+      },
+      {
+        path: "/profile/:id/*",
+        element: <Profile />,
+      },
+      {
+        path: "/update-profile/:id",
+        element: <UpdateProfile />,
       },
     ],
   },
