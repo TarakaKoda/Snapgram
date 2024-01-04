@@ -1,10 +1,10 @@
 import { Outlet, Navigate } from "react-router-dom";
-import { Toaster } from "@/components/ui/toaster";
+import AppLayout from "@/AppLayout";
 
 const AuthLayout = () => {
   const isAuthenticated = false;
   return (
-    <>
+    <AppLayout>
       {isAuthenticated ? (
         <Navigate to={"/"} />
       ) : (
@@ -19,8 +19,7 @@ const AuthLayout = () => {
           />
         </div>
       )}
-      <Toaster />
-    </>
+    </AppLayout>
   );
 };
 

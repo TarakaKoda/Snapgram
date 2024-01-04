@@ -1,11 +1,6 @@
-import { Toaster } from "@/components/ui/toaster";
+import AppLayout from "@/AppLayout";
 const RootLayout = () => {
-  return (
-    <div>
-      RootLayout
-      <Toaster />
-    </div>
-  );
+  return <AppLayout>RootLayout</AppLayout>;
 };
 
 export default RootLayout;
