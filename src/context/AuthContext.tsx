@@ -79,3 +79,4 @@ const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 export default AuthProvider;
 
 export const useUserContext = () => useContext(AuthContext);
+

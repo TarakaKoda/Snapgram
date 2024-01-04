@@ -1,5 +1,7 @@
-import Loader from "@/components/shared/Loader";
-import { Button } from "@/components/ui/button";
+import { Link, useNavigate } from "react-router-dom";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
 import {
   Form,
   FormControl,
@@ -8,7 +10,11 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
+
+import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+
+import { Loader } from "@/components/shared";
 import { useToast } from "@/components/ui/use-toast";
 import { useUserContext } from "@/context/AuthContext";
 import {
@@ -16,21 +22,16 @@ import {
   useSignInAccount,
 } from "@/lib/react-query/queriesAndMutations";
 import { SignUpValidation } from "@/lib/validation";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import { Link, useNavigate } from "react-router-dom";
-import { z } from "zod";
 
 const SignUpForm = () => {
   const { toast } = useToast();
-  const { checkAuthUser, isLoading: isUserLoading } = useUserContext();
+  const { checkAuthUser } = useUserContext();
   const navigate = useNavigate();
 
   const { mutateAsync: createUserAccount, isPending: isCreatingAccount } =
     useCreateUserAccount();
 
-  const { mutateAsync: signInAccount, isPending: isSignInAccount } =
-    useSignInAccount();
+  const { mutateAsync: signInAccount } = useSignInAccount();
 
   const form = useForm<z.infer<typeof SignUpValidation>>({
     resolver: zodResolver(SignUpValidation),
@@ -70,12 +71,12 @@ const SignUpForm = () => {
   return (
     <Form {...form}>
       <div className="flex-center flex-col sm:w-420">
-        <img src="/public/assets/images/logo.svg" alt="logo" />
+        <img src="/assets/images/logo.svg" alt="logo" />
         <h2 className="h3-bold md:h2-bold pt-5 sm:pt-12">
           Create a new account
         </h2>
         <p className="small-medium sm:base-regular mt-2 text-light-3">
-          To use SnapNex, please enter your details
+          To use SnapNex, Please enter your details
         </p>
 
         <form
