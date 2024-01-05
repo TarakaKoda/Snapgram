@@ -38,7 +38,7 @@ const FileUploader = ({ fieldChange, mediaUrl }: FileUploaderProps) => {
           <p className="file_uploader-label"> Click or darg photo to replace</p>
         </>
       ) : (
-        <div className="file_uploader-box">
+        <div className="file_uploader-box object-cover">
           <img
             src="/assets/icons/file-upload.svg"
             alt="file upload"
