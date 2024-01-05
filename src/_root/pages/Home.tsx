@@ -7,10 +7,10 @@ const Home = () => {
   const {
     data: posts,
     isPending: isPostLoading,
-    isError,
+    // isError,
   } = useGetRecentPosts();
   return (
-    <div className="flex flex-1 ">
+    <div className="flex flex-1">
       <div className="home-container">
         <div className="home-posts">
           <h2 className="h3-bold md:h2-bold w-full text-left">Home Feed</h2>

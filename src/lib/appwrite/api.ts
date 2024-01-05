@@ -1,7 +1,7 @@
 import { ID, Query } from "appwrite";
 import { INewPost, INewUser, IUpdatePost } from "@/types";
 import { account, appwriteConfig, avatars, storage, databases } from "./config";
-import { QUERY_KEYS } from "../react-query/queryKeys";
+
 
 export async function createUserAccount(user: INewUser) {
   try {

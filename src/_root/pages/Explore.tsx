@@ -2,7 +2,7 @@ import { Loader } from "@/components/shared";
 import GridPostList from "@/components/shared/GridPostList";
 import SearchResults from "@/components/shared/SearchResults";
 import { Input } from "@/components/ui/input";
-import useDebounce from "@/hooks/UseDebounce";
+import useDebounce from "../../hooks/useDebounce";
 import {
   useGetPosts,
   useSearchPosts,

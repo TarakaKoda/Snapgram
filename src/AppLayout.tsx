@@ -4,7 +4,7 @@ import { ReactNode } from "react";
 
 const AppLayout = ({ children }: { children: ReactNode }) => {
   return (
-    <main className="flex h-screen">
+    <main className="flex w-screen h-screen">
       <AuthProvider>
         {children}
         <Toaster />
