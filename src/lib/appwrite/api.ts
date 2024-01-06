@@ -2,7 +2,6 @@ import { ID, Query } from "appwrite";
 import { INewPost, INewUser, IUpdatePost } from "@/types";
 import { account, appwriteConfig, avatars, storage, databases } from "./config";
 
-
 export async function createUserAccount(user: INewUser) {
   try {
     const newAccount = await account.create(
@@ -324,9 +323,9 @@ export async function deletePost(postId: string, imageId: string) {
 }
 
 export async function getInfinitePosts({ pageParam }: { pageParam: number }) {
-  const queries: any[] = [Query.orderDesc("$updatedAt"), Query.limit(10)];
+  const queries: any[] = [Query.orderDesc("$updatedAt"), Query.limit(9)];
 
-  if (pageParam) { 
+  if (pageParam) {
     queries.push(Query.cursorAfter(pageParam.toString()));
   }
 
@@ -335,7 +334,7 @@ export async function getInfinitePosts({ pageParam }: { pageParam: number }) {
       appwriteConfig.databaseId,
       appwriteConfig.postCollectionId,
       queries,
-    ); 
+    );
     if (!posts) throw Error;
     return posts;
   } catch (error) {
