@@ -109,7 +109,7 @@
   }
 
   .common-container {
-    @apply custom-scrollbar flex flex-1 flex-col items-center gap-10 overflow-scroll px-5 py-10 md:px-8 lg:p-14;
+    @apply custom-scrollbar flex min-w-[26.5rem] flex-1 flex-col items-center gap-10 overflow-scroll px-5 py-10 md:px-8 lg:p-14;
   }
 
   /* All Users */
@@ -123,11 +123,11 @@
 
   /* Explore */
   .explore-container {
-    @apply custom-scrollbar flex flex-1 flex-col items-center overflow-scroll px-5 py-10 md:p-14;
+    @apply custom-scrollbar flex min-w-[26.5rem] flex-1 flex-col items-center overflow-scroll px-5 py-10 md:p-14;
   }
 
   .explore-inner_container {
-    @apply flex w-full max-w-5xl flex-col items-center gap-6 md:gap-9;
+    @apply flex w-full max-w-5xl flex-col items-center gap-6  md:gap-9;
   }
 
   .explore-search {
@@ -206,7 +206,7 @@
 
   /* Grid Post List */
   .grid-container {
-    @apply grid w-full max-w-5xl grid-cols-1 gap-7 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3;
+    @apply grid w-full max-w-5xl grid-cols-1 gap-7 sm:grid-cols-2  md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3;
   }
 
   .grid-post_link {
