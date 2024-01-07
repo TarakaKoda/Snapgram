@@ -368,3 +368,21 @@ export async function getUsers() {
     console.log(error);
   }
 }
+
+export async function getInfiniteUsers({ pageParam }: { pageParam: number }) {
+  const queries: any[] = [Query.orderDesc("$createdAt"), Query.limit(9)];
+  if (pageParam) {
+    queries.push(Query.cursorAfter(pageParam.toString()));
+  }
+  try {
+    const users = await databases.listDocuments(
+      appwriteConfig.databaseId,
+      appwriteConfig.userCollectionId,
+      queries,
+    );
+    if (!users) throw Error;
+    return users;
+  } catch (error) {
+    console.log(error);
+  }
+}
