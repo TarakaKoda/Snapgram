@@ -1,16 +1,25 @@
 import { Loader } from "@/components/shared";
 import PostCard from "@/components/shared/PostCard";
 import UserCard from "@/components/shared/UserCard";
-import { useGetPosts, useGetUsers } from "@/lib/react-query/queriesAndMutations";
+import {
+  useGetCurrentUser,
+  useGetPosts,
+  useGetUsers,
+} from "@/lib/react-query/queriesAndMutations";
 import { Models } from "appwrite";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
 const Home = () => {
   const { data: posts, isFetching, fetchNextPage, hasNextPage } = useGetPosts();
-  const {data: creators, isLoading: isUserLoading} = useGetUsers()
+  const { data: creators, isLoading: isUserLoading } = useGetUsers();
+  const { data: currentUser } = useGetCurrentUser();
 
   const { ref, inView } = useInView();
+
+  const allCreators = creators?.documents.filter(
+    (creator) => creator.$id !== currentUser?.$id,
+  );
 
   useEffect(() => {
     if (inView) fetchNextPage();
@@ -28,7 +37,13 @@ const Home = () => {
       <div className="home-container">
         <div className="home-posts">
           <div className="flex gap-2">
-            <img src="/assets/icons/home.svg" alt="home" width={36} height={36} className="invert-white" />
+            <img
+              src="/assets/icons/home.svg"
+              alt="home"
+              width={36}
+              height={36}
+              className="invert-white"
+            />
             <h2 className="h3-bold md:h2-bold w-full">Home Feed</h2>
           </div>
           {isFetching && !posts ? (
@@ -54,8 +69,8 @@ const Home = () => {
         {isUserLoading && !creators ? (
           <Loader />
         ) : (
-          <ul className="grid 2xl:grid-cols-2 gap-6">
-            {creators?.documents.map((creator) => (
+          <ul className="grid gap-6 2xl:grid-cols-2">
+            {allCreators?.map((creator) => (
               <li key={creator?.$id}>
                 <UserCard user={creator} />
               </li>

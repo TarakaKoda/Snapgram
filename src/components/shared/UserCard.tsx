@@ -1,14 +1,17 @@
 import { Models } from "appwrite";
 import { Link } from "react-router-dom";
 import { Button } from "../ui/button";
+import { useGetCurrentUser } from "@/lib/react-query/queriesAndMutations";
 
 interface UserCardProps {
-  user: Models.Document;    
+  user: Models.Document;
 }
 
 const UserCard = ({ user }: UserCardProps) => {
+  const { data: currentUser } = useGetCurrentUser();
+  
   return (
-    <Link to={`/profile/${user.$id}`} className="user-card">
+    <Link to={`/profile/${user.$id}`} className={`flex-col gap-4 rounded-[20px] border border-dark-4 px-5 py-8 ${currentUser?.$id === user.$id ? "hidden" : "flex-center"}`}>
       <img
         src={user.imageUrl || `/assets/icons/profile-placeholder.svg`}
         alt="creator"
