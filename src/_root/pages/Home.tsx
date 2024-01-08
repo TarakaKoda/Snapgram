@@ -27,7 +27,10 @@ const Home = () => {
     <div className="flex flex-1">
       <div className="home-container">
         <div className="home-posts">
-          <h2 className="h3-bold md:h2-bold w-full text-left">Home Feed</h2>
+          <div className="flex gap-2">
+            <img src="/assets/icons/home.svg" alt="home" width={36} height={36} className="invert-white" />
+            <h2 className="h3-bold md:h2-bold w-full">Home Feed</h2>
+          </div>
           {isFetching && !posts ? (
             <Loader />
           ) : (

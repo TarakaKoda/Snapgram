@@ -1,10 +1,10 @@
-import { useGetInfiniteUsers } from "@/lib/react-query/queriesAndMutations";
-import { useToast } from "@/components/ui/use-toast";
 import { Loader } from "@/components/shared";
 import UserCard from "@/components/shared/UserCard";
-import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
+import { useToast } from "@/components/ui/use-toast";
+import { useGetInfiniteUsers } from "@/lib/react-query/queriesAndMutations";
 import { Models } from "appwrite";
+import { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 
 const AllUsers = () => {
   const { toast } = useToast();
@@ -43,8 +43,9 @@ const AllUsers = () => {
           <img
             src="/assets/icons/people.svg"
             alt="users"
-            width={24}
-            height={24}
+            width={38}
+            height={38}
+            className="invert-white"
           />
           <h2 className="h3-bold md:h2-bold w-full text-left">All Users</h2>
         </div>

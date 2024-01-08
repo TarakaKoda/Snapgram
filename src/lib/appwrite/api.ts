@@ -386,3 +386,34 @@ export async function getInfiniteUsers({ pageParam }: { pageParam: number }) {
     console.log(error);
   }
 }
+
+export async function getInfiniteSavedPosts({
+  pageParam,
+  order = "NEWEST",
+}: {
+  pageParam: number;
+  order?: "NEWEST" | "OLDEST";
+}) {
+  const queries: any[] =
+    order === "NEWEST"
+      ? [Query.orderDesc("$createdAt"), Query.limit(9)]
+      : [Query.orderAsc("$createdAt"), Query.limit(9)];
+
+  if (pageParam) {
+    queries.push(Query.cursorAfter(pageParam.toString()));
+  }
+  try {
+    const savedPost = await databases.listDocuments(
+      appwriteConfig.databaseId,
+      appwriteConfig.savesCollectionId,
+      queries,
+    );
+
+    if (!savedPost) {
+      throw Error;
+    }
+    return savedPost;
+  } catch (error) {
+    console.log(error);
+  }
+}

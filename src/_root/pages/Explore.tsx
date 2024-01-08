@@ -37,7 +37,16 @@ const Explore = () => {
   return (
     <div className="explore-container">
       <div className="explore-inner_container">
-        <h2 className="h3-bold md:h2-bold w-full">Search Posts</h2>
+        <div className="flex gap-2">
+          <img
+            src="/assets/icons/posts.svg"
+            alt="post"
+            width={36}
+            height={36}
+            className="invert-white"
+          />
+          <h2 className="h3-bold md:h2-bold w-full">Search Posts</h2>
+        </div>
         <div className="flex w-full gap-1 rounded-lg bg-dark-4 px-4">
           <img
             src="/assets/icons/search.svg"

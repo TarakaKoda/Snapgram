@@ -114,7 +114,7 @@
 
   /* All Users */
   .user-container {
-    @apply flex w-full max-w-5xl flex-col items-start gap-6 md:gap-9;
+    @apply flex w-full max-w-5xl flex-col items-center gap-6 md:gap-9;
   }
 
   .user-grid {
@@ -183,12 +183,12 @@
 
   /* Saved */
   .saved-container {
-    @apply custom-scrollbar flex flex-1 flex-col items-center gap-10 overflow-scroll px-5 py-10 md:p-14;
+    @apply custom-scrollbar flex flex-1 flex-col min-w-[26.5rem] items-center gap-10 overflow-scroll px-5 py-10 md:p-14;
   }
 
   /* Bottom bar */
   .bottom-bar {
-    @apply flex-between sticky bottom-0 z-50 w-full min-w-[26.5rem] rounded-t-[20px] bg-dark-2 px-5 py-4 md:hidden;
+    @apply flex-between sticky bottom-0 max-sm:-bottom-4 z-50 w-full min-w-[26.5rem] rounded-t-[20px] bg-dark-2 px-5 py-4 md:hidden;
   }
 
   /* File uploader */
