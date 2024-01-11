@@ -1,16 +1,14 @@
 import {
-  Route,
-  Routes,
   Link,
   Outlet,
-  useParams,
   useLocation,
+  useParams
 } from "react-router-dom";
 
-import { LikedPosts } from "@/_root/pages";
-import { useUserContext } from "@/context/AuthContext";
-import { GridPostList, Loader } from "@/components/shared";
+import { Loader } from "@/components/shared";
 import { Button } from "@/components/ui/button";
+import { useUserContext } from "@/context/AuthContext";
+import { useGetUserById } from "@/lib/react-query/queriesAndMutations";
 
 interface StabBlockProps {
   value: string | number;
@@ -28,12 +26,11 @@ const Profile = () => {
   const { id } = useParams();
   const { user } = useUserContext();
   const { pathname } = useLocation();
-
   const { data: currentUser } = useGetUserById(id || "");
-
+   
   if (!currentUser)
     return (
-      <div className="flex-center w-full h-full">
+      <div className="flex-center h-full w-full">
         <Loader />
       </div>
     );
@@ -41,31 +38,31 @@ const Profile = () => {
   return (
     <div className="profile-container">
       <div className="profile-inner_container">
-        <div className="flex xl:flex-row flex-col max-xl:items-center flex-1 gap-7">
+        <div className="flex flex-1 flex-col gap-7 max-xl:items-center xl:flex-row">
           <img
             src={
               currentUser.imageUrl || "/assets/icons/profile-placeholder.svg"
             }
             alt="profile"
-            className="w-28 h-28 lg:h-36 lg:w-36 rounded-full"
+            className="h-28 w-28 rounded-full lg:h-36 lg:w-36"
           />
-          <div className="flex flex-col flex-1 justify-between md:mt-2">
-            <div className="flex flex-col w-full">
-              <h1 className="text-center xl:text-left h3-bold md:h1-semibold w-full">
+          <div className="flex flex-1 flex-col justify-between md:mt-2">
+            <div className="flex w-full flex-col">
+              <h1 className="h3-bold md:h1-semibold w-full text-center xl:text-left">
                 {currentUser.name}
               </h1>
-              <p className="small-regular md:body-medium text-light-3 text-center xl:text-left">
+              <p className="small-regular md:body-medium text-center text-light-3 xl:text-left">
                 @{currentUser.username}
               </p>
             </div>
 
-            <div className="flex gap-8 mt-10 items-center justify-center xl:justify-start flex-wrap z-20">
+            <div className="z-20 mt-10 flex flex-wrap items-center justify-center gap-8 xl:justify-start">
               <StatBlock value={currentUser.posts.length} label="Posts" />
               <StatBlock value={20} label="Followers" />
               <StatBlock value={20} label="Following" />
             </div>
 
-            <p className="small-medium md:base-medium text-center xl:text-left mt-7 max-w-screen-sm">
+            <p className="small-medium md:base-medium mt-7 max-w-screen-sm text-center xl:text-left">
               {currentUser.bio}
             </p>
           </div>
@@ -74,16 +71,17 @@ const Profile = () => {
             <div className={`${user.id !== currentUser.$id && "hidden"}`}>
               <Link
                 to={`/update-profile/${currentUser.$id}`}
-                className={`h-12 bg-dark-4 px-5 text-light-1 flex-center gap-2 rounded-lg ${
+                className={`flex-center h-12 gap-2 rounded-lg bg-dark-4 px-5 text-light-1 ${
                   user.id !== currentUser.$id && "hidden"
-                }`}>
+                }`}
+              >
                 <img
                   src={"/assets/icons/edit.svg"}
                   alt="edit"
                   width={20}
                   height={20}
                 />
-                <p className="flex whitespace-nowrap small-medium">
+                <p className="small-medium flex whitespace-nowrap">
                   Edit Profile
                 </p>
               </Link>
@@ -98,12 +96,13 @@ const Profile = () => {
       </div>
 
       {currentUser.$id === user.id && (
-        <div className="flex max-w-5xl w-full">
+        <div className="flex w-full max-w-5xl">
           <Link
             to={`/profile/${id}`}
             className={`profile-tab rounded-l-lg ${
               pathname === `/profile/${id}` && "!bg-dark-3"
-            }`}>
+            }`}
+          >
             <img
               src={"/assets/icons/posts.svg"}
               alt="posts"
@@ -116,7 +115,8 @@ const Profile = () => {
             to={`/profile/${id}/liked-posts`}
             className={`profile-tab rounded-r-lg ${
               pathname === `/profile/${id}/liked-posts` && "!bg-dark-3"
-            }`}>
+            }`}
+          >
             <img
               src={"/assets/icons/like.svg"}
               alt="like"
@@ -127,16 +127,6 @@ const Profile = () => {
           </Link>
         </div>
       )}
-
-      <Routes>
-        <Route
-          index
-          element={<GridPostList posts={currentUser.posts} showUser={false} />}
-        />
-        {currentUser.$id === user.id && (
-          <Route path="/liked-posts" element={<LikedPosts />} />
-        )}
-      </Routes>
       <Outlet />
     </div>
   );

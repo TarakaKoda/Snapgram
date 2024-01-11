@@ -14,6 +14,8 @@ import {
   Saved,
   UpdateProfile,
 } from "./_root/pages";
+import CurrentUserPosts from "./components/shared/CurrentUserPosts";
+import CurrentUserLikedPosts from "./components/shared/CurrentUserLikedPosts";
 
 const routes = createBrowserRouter([
   {
@@ -64,6 +66,16 @@ const routes = createBrowserRouter([
       {
         path: "/profile/:id/*",
         element: <Profile />,
+        children: [
+          {
+            index: true,
+            element: <CurrentUserPosts />,
+          },
+          {
+            path:"liked-posts",
+            element: <CurrentUserLikedPosts/>,
+          }
+        ],
       },
       {
         path: "/update-profile/:id",
