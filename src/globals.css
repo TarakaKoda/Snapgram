@@ -136,7 +136,7 @@
 
   /* Home */
   .home-container {
-    @apply custom-scrollbar flex flex-1 flex-col items-center gap-10 overflow-scroll px-5 py-10 md:px-8 lg:p-14;
+    @apply custom-scrollbar min-w-[26.5rem] flex flex-1 flex-col items-center gap-10 overflow-scroll px-5 py-10 md:px-8 lg:p-14;
   }
 
   .home-posts {
@@ -149,7 +149,7 @@
 
   /* Post Details */
   .post_details-container {
-    @apply custom-scrollbar flex flex-1 flex-col items-center gap-10 overflow-scroll px-5 py-10 md:p-14;
+    @apply custom-scrollbar min-w-[26.5rem]  flex flex-1 flex-col items-center gap-10 overflow-scroll px-5 py-10 md:p-14;
   }
 
   .post_details-card {
@@ -170,7 +170,7 @@
 
   /* Profile */
   .profile-container {
-    @apply custom-scrollbar flex flex-1 flex-col items-center gap-10 overflow-scroll px-5 py-10 md:p-14;
+    @apply custom-scrollbar min-w-[26.5rem]  flex flex-1 flex-col items-center gap-10 overflow-scroll px-5 py-10 md:p-14;
   }
 
   .profile-inner_container {
