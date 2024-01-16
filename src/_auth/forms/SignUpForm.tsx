@@ -76,7 +76,7 @@ const SignUpForm = () => {
           Create a new account
         </h2>
         <p className="small-medium sm:base-regular mt-2 text-light-3">
-          To use SnapNex, Please enter your details
+          To use Snapgram, Please enter your details
         </p>
 
         <form
