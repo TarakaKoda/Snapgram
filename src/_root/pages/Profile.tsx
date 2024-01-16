@@ -44,7 +44,7 @@ const Profile = () => {
               currentUser.imageUrl || "/assets/icons/profile-placeholder.svg"
             }
             alt="profile"
-            className="h-28 w-28 rounded-full lg:h-36 lg:w-36"
+            className="h-28 w-28 rounded-full object-cover lg:h-36 lg:w-36"
           />
           <div className="flex flex-1 flex-col justify-between md:mt-2">
             <div className="flex w-full flex-col">
