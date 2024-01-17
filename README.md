@@ -25,15 +25,11 @@
 4. 🤸 [Quick Start](#quick-start)
 5. 🕸️ [Snippets](#snippets)
 6. 🔗 [Links](#links)
-7. 🚀 [More](#more)
+7. 🚀 [](#more)
 
 ## <a name="introduction">🤖 Introduction</a>
 
 Explore social media with this user-friendly platform that has a nice look and lots of features. Easily create and explore posts, and enjoy a strong authentication system and quick data fetching using React Query for a smooth user experience.
-
-If you're getting started and need assistance or face any bugs, join our active Discord community with over 27k+ members. It's a place where people help each other out.
-
-<a href="https://discord.com/invite/n6EdbFJ" target="_blank"><img src="https://github.com/sujatagunale/EasyRead/assets/151519281/618f4872-1e10-42da-8213-1d69e486d02e" /></a>
 
 ## <a name="tech-stack">⚙️ Tech Stack</a>
 
@@ -68,7 +64,7 @@ If you're getting started and need assistance or face any bugs, join our active 
 
 👉 **Backend as a Service (BaaS) - Appwrite**: Utilize Appwrite as a Backend as a Service solution for streamlined backend development, offering features like authentication, database, file storage, and more
 
-and many more, including code architecture and reusability 
+and many more, including code architecture and reusability
 
 ## <a name="quick-start">🤸 Quick Start</a>
 
@@ -193,11 +189,11 @@ export const bottombarLinks = [
 
 @layer base {
   * {
-    @apply box-border list-none p-0 m-0 scroll-smooth;
+    @apply m-0 box-border list-none scroll-smooth p-0;
   }
 
   body {
-    @apply bg-dark-1 text-white min-h-screen font-inter;
+    @apply min-h-screen bg-dark-1 font-inter text-white;
   }
 }
 
@@ -261,19 +257,19 @@ export const bottombarLinks = [
 
   /* UTILITIES */
   .invert-white {
-    @apply invert brightness-0 transition;
+    @apply brightness-0 invert transition;
   }
 
   .flex-center {
-    @apply flex justify-center items-center;
+    @apply flex items-center justify-center;
   }
 
   .flex-between {
-    @apply flex justify-between items-center;
+    @apply flex items-center justify-between;
   }
 
   .flex-start {
-    @apply flex justify-start items-center;
+    @apply flex items-center justify-start;
   }
 
   .custom-scrollbar::-webkit-scrollbar {
@@ -296,140 +292,140 @@ export const bottombarLinks = [
   }
 
   .common-container {
-    @apply flex flex-col flex-1 items-center gap-10 overflow-scroll py-10 px-5 md:px-8 lg:p-14 custom-scrollbar;
+    @apply custom-scrollbar flex flex-1 flex-col items-center gap-10 overflow-scroll px-5 py-10 md:px-8 lg:p-14;
   }
 
   /* All Users */
   .user-container {
-    @apply max-w-5xl flex flex-col items-start w-full gap-6 md:gap-9;
+    @apply flex w-full max-w-5xl flex-col items-start gap-6 md:gap-9;
   }
 
   .user-grid {
-    @apply w-full grid grid-cols-1 xs:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-7 max-w-5xl;
+    @apply grid w-full max-w-5xl grid-cols-1 gap-7 xs:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3;
   }
 
   /* Explore */
   .explore-container {
-    @apply flex flex-col flex-1 items-center overflow-scroll py-10 px-5 md:p-14 custom-scrollbar;
+    @apply custom-scrollbar flex flex-1 flex-col items-center overflow-scroll px-5 py-10 md:p-14;
   }
 
   .explore-inner_container {
-    @apply max-w-5xl flex flex-col items-center w-full gap-6 md:gap-9;
+    @apply flex w-full max-w-5xl flex-col items-center gap-6 md:gap-9;
   }
 
   .explore-search {
-    @apply h-12 bg-dark-4 border-none placeholder:text-light-4 focus-visible:ring-0 focus-visible:ring-offset-0 ring-offset-0 !important;
+    @apply h-12 border-none bg-dark-4 ring-offset-0 placeholder:text-light-4 focus-visible:ring-0 focus-visible:ring-offset-0 !important;
   }
 
   /* Home */
   .home-container {
-    @apply flex flex-col flex-1 items-center gap-10 overflow-scroll py-10 px-5 md:px-8 lg:p-14 custom-scrollbar;
+    @apply custom-scrollbar flex flex-1 flex-col items-center gap-10 overflow-scroll px-5 py-10 md:px-8 lg:p-14;
   }
 
   .home-posts {
-    @apply max-w-screen-sm flex flex-col items-center w-full gap-6 md:gap-9;
+    @apply flex w-full max-w-screen-sm flex-col items-center gap-6 md:gap-9;
   }
 
   .home-creators {
-    @apply hidden xl:flex flex-col w-72 2xl:w-465 px-6 py-10 gap-10  overflow-scroll custom-scrollbar;
+    @apply custom-scrollbar hidden w-72 flex-col gap-10 overflow-scroll px-6 py-10  xl:flex 2xl:w-465;
   }
 
   /* Post Details */
   .post_details-container {
-    @apply flex flex-col flex-1 gap-10 overflow-scroll py-10 px-5 md:p-14 custom-scrollbar items-center;
+    @apply custom-scrollbar flex flex-1 flex-col items-center gap-10 overflow-scroll px-5 py-10 md:p-14;
   }
 
   .post_details-card {
-    @apply bg-dark-2 w-full max-w-5xl rounded-[30px] flex-col flex xl:flex-row border border-dark-4 xl:rounded-l-[24px];
+    @apply flex w-full max-w-5xl flex-col rounded-[30px] border border-dark-4 bg-dark-2 xl:flex-row xl:rounded-l-[24px];
   }
 
   .post_details-img {
-    @apply h-80 lg:h-[480px] xl:w-[48%] rounded-t-[30px] xl:rounded-l-[24px] xl:rounded-tr-none object-cover p-5 bg-dark-1;
+    @apply h-80 rounded-t-[30px] bg-dark-1 object-cover p-5 lg:h-[480px] xl:w-[48%] xl:rounded-l-[24px] xl:rounded-tr-none;
   }
 
   .post_details-info {
-    @apply bg-dark-2 flex flex-col gap-5 lg:gap-7 flex-1 items-start p-8 rounded-[30px];
+    @apply flex flex-1 flex-col items-start gap-5 rounded-[30px] bg-dark-2 p-8 lg:gap-7;
   }
 
   .post_details-delete_btn {
-    @apply p-0 flex gap-3 hover:bg-transparent hover:text-light-1  text-light-1 small-medium lg:base-medium;
+    @apply small-medium lg:base-medium flex gap-3 p-0  text-light-1 hover:bg-transparent hover:text-light-1;
   }
 
   /* Profile */
   .profile-container {
-    @apply flex flex-col items-center flex-1 gap-10 overflow-scroll py-10 px-5 md:p-14 custom-scrollbar;
+    @apply custom-scrollbar flex flex-1 flex-col items-center gap-10 overflow-scroll px-5 py-10 md:p-14;
   }
 
   .profile-inner_container {
-    @apply flex items-center md:mb-8 xl:items-start gap-8 flex-col xl:flex-row relative max-w-5xl w-full;
+    @apply relative flex w-full max-w-5xl flex-col items-center gap-8 md:mb-8 xl:flex-row xl:items-start;
   }
 
   .profile-tab {
-    @apply flex-center gap-3 py-4 w-48 bg-dark-2  transition flex-1 xl:flex-initial;
+    @apply flex-center w-48 flex-1 gap-3 bg-dark-2  py-4 transition xl:flex-initial;
   }
 
   /* Saved */
   .saved-container {
-    @apply flex flex-col flex-1 items-center gap-10 overflow-scroll py-10 px-5 md:p-14 custom-scrollbar;
+    @apply custom-scrollbar flex flex-1 flex-col items-center gap-10 overflow-scroll px-5 py-10 md:p-14;
   }
 
   /* Bottom bar */
   .bottom-bar {
-    @apply z-50 flex-between w-full sticky bottom-0 rounded-t-[20px] bg-dark-2 px-5 py-4 md:hidden;
+    @apply flex-between sticky bottom-0 z-50 w-full rounded-t-[20px] bg-dark-2 px-5 py-4 md:hidden;
   }
 
   /* File uploader */
   .file_uploader-img {
-    @apply h-80 lg:h-[480px] w-full rounded-[24px] object-cover object-top;
+    @apply h-80 w-full rounded-[24px] object-cover object-top lg:h-[480px];
   }
 
   .file_uploader-label {
-    @apply text-light-4 text-center small-regular w-full p-4 border-t border-t-dark-4;
+    @apply small-regular w-full border-t border-t-dark-4 p-4 text-center text-light-4;
   }
 
   .file_uploader-box {
-    @apply flex-center flex-col p-7 h-80 lg:h-[612px];
+    @apply flex-center h-80 flex-col p-7 lg:h-[612px];
   }
 
   /* Grid Post List */
   .grid-container {
-    @apply w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-7 max-w-5xl;
+    @apply grid w-full max-w-5xl grid-cols-1 gap-7 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3;
   }
 
   .grid-post_link {
-    @apply flex rounded-[24px] border border-dark-4 overflow-hidden cursor-pointer w-full h-full;
+    @apply flex h-full w-full cursor-pointer overflow-hidden rounded-[24px] border border-dark-4;
   }
 
   .grid-post_user {
-    @apply absolute bottom-0 p-5 flex-between w-full bg-gradient-to-t from-dark-3 to-transparent rounded-b-[24px] gap-2;
+    @apply flex-between absolute bottom-0 w-full gap-2 rounded-b-[24px] bg-gradient-to-t from-dark-3 to-transparent p-5;
   }
 
   /* Left sidebar */
   .leftsidebar {
-    @apply hidden md:flex px-6 py-10 flex-col justify-between min-w-[270px] bg-dark-2;
+    @apply hidden min-w-[270px] flex-col justify-between bg-dark-2 px-6 py-10 md:flex;
   }
 
   .leftsidebar-link {
-    @apply rounded-lg base-medium hover:bg-primary-500 transition;
+    @apply base-medium rounded-lg transition hover:bg-primary-500;
   }
 
   /* Post Card */
   .post-card {
-    @apply bg-dark-2 rounded-3xl border border-dark-4 p-5 lg:p-7 w-full max-w-screen-sm;
+    @apply w-full max-w-screen-sm rounded-3xl border border-dark-4 bg-dark-2 p-5 lg:p-7;
   }
 
   .post-card_img {
-    @apply h-64 xs:h-[400px] lg:h-[450px] w-full rounded-[24px] object-cover mb-5;
+    @apply mb-5 h-64 w-full rounded-[24px] object-cover xs:h-[400px] lg:h-[450px];
   }
 
   /* Topbar */
   .topbar {
-    @apply sticky top-0 z-50 md:hidden bg-dark-2 w-full;
+    @apply sticky top-0 z-50 w-full bg-dark-2 md:hidden;
   }
 
   /* User card */
   .user-card {
-    @apply flex-center flex-col gap-4 border border-dark-4 rounded-[20px] px-5 py-8;
+    @apply flex-center flex-col gap-4 rounded-[20px] border border-dark-4 px-5 py-8;
   }
 }
 
@@ -445,30 +441,29 @@ export const bottombarLinks = [
   }
 
   .shad-input {
-    @apply h-12 bg-dark-4 border-none placeholder:text-light-4 focus-visible:ring-1 focus-visible:ring-offset-1 ring-offset-light-3 !important;
+    @apply h-12 border-none bg-dark-4 ring-offset-light-3 placeholder:text-light-4 focus-visible:ring-1 focus-visible:ring-offset-1 !important;
   }
 
   .shad-textarea {
-    @apply h-36 bg-dark-3 rounded-xl border-none focus-visible:ring-1 focus-visible:ring-offset-1 ring-offset-light-3 !important;
+    @apply h-36 rounded-xl border-none bg-dark-3 ring-offset-light-3 focus-visible:ring-1 focus-visible:ring-offset-1 !important;
   }
 
   /* Button */
   .shad-button_primary {
-    @apply bg-primary-500 hover:bg-primary-500 text-light-1 flex gap-2 !important;
+    @apply flex gap-2 bg-primary-500 text-light-1 hover:bg-primary-500 !important;
   }
 
   .shad-button_dark_4 {
-    @apply h-12 bg-dark-4 px-5 text-light-1 flex gap-2 !important;
+    @apply flex h-12 gap-2 bg-dark-4 px-5 text-light-1 !important;
   }
 
   .shad-button_ghost {
-    @apply flex gap-4 items-center justify-start hover:bg-transparent hover:text-white !important;
+    @apply flex items-center justify-start gap-4 hover:bg-transparent hover:text-white !important;
   }
 }
 ```
 
 </details>
-
 
 <details>
 <summary><code>queryKeys.ts</code></summary>
@@ -503,70 +498,67 @@ export enum QUERY_KEYS {
 
 ```javascript
 /** @type {import('tailwindcss').Config} */
-const defaultTheme = require('tailwindcss/defaultTheme')
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
-  darkMode: ['class'],
+  darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
   ],
   theme: {
     container: {
       center: true,
-      padding: '2rem',
+      padding: "2rem",
       screens: {
-        '2xl': '1400px',
-      
+        "2xl": "1400px",
       },
     },
     extend: {
       colors: {
-        'primary-500': '#877EFF',
-        'primary-600': '#5D5FEF',
-        'secondary-500': '#FFB620',
-        'off-white': '#D0DFFF',
-        'red': '#FF5A5A',
-        'dark-1': '#000000',
-        'dark-2': '#09090A',
-        'dark-3': '#101012',
-        'dark-4': '#1F1F22',
-        'light-1': '#FFFFFF',
-        'light-2': '#EFEFEF',
-        'light-3': '#7878A3',
-        'light-4': '#5C5C7B',
+        "primary-500": "#877EFF",
+        "primary-600": "#5D5FEF",
+        "secondary-500": "#FFB620",
+        "off-white": "#D0DFFF",
+        red: "#FF5A5A",
+        "dark-1": "#000000",
+        "dark-2": "#09090A",
+        "dark-3": "#101012",
+        "dark-4": "#1F1F22",
+        "light-1": "#FFFFFF",
+        "light-2": "#EFEFEF",
+        "light-3": "#7878A3",
+        "light-4": "#5C5C7B",
       },
       screens: {
-        'xs': '480px',
-      
+        xs: "480px",
       },
       width: {
-        '420': '420px',
-        '465': '465px',
+        420: "420px",
+        465: "465px",
       },
       fontFamily: {
-        inter: ['Inter', 'sans-serif'],
-
+        inter: ["Inter", "sans-serif"],
       },
       keyframes: {
-        'accordion-down': {
+        "accordion-down": {
           from: { height: 0 },
-          to: { height: 'var(--radix-accordion-content-height)' },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
-        'accordion-up': {
-          from: { height: 'var(--radix-accordion-content-height)' },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
           to: { height: 0 },
         },
       },
       animation: {
-        'accordion-down': 'accordion-down 0.2s ease-out',
-        'accordion-up': 'accordion-up 0.2s ease-out',
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
       },
     },
   },
-  plugins: [require('tailwindcss-animate')],
+  plugins: [require("tailwindcss-animate")],
 };
 ```
 
@@ -690,7 +682,7 @@ export function formatDateString(dateString: string) {
   return `${formattedDate} at ${time}`;
 }
 
-// 
+//
 export const multiFormatDateString = (timestamp: string = ""): string => {
   const timestampNum = Math.round(new Date(timestamp).getTime() / 1000);
   const date: Date = new Date(timestampNum * 1000);
@@ -725,6 +717,9 @@ export const checkIsLiked = (likeList: string[], userId: string) => {
 
 </details>
 
-## <a name="links">🔗 Links</a>
+## <a name="links" target="_blank">🔗 Links</a>
 
 Assets used in the project are [here](https://drive.google.com/file/d/13_7FofRAC3wARqPtAVPi53QNJJRd5RH_/view?usp=sharing)
+
+## <a name="screenshots"> 📸 Screenshots </a>
+

@@ -1,6 +1,7 @@
 import {
   useDeleteSavedPost,
   useGetCurrentUser,
+  useGetUserById,
   useLikePost,
   useSavePost,
 } from "@/lib/react-query/queriesAndMutations";
@@ -8,17 +9,20 @@ import { checkIsLiked } from "@/lib/utils";
 import { Models } from "appwrite";
 import { useState, useEffect } from "react";
 import Loader from "./Loader";
+import { Link } from "react-router-dom";
 
 interface PostStatsProps {
   post?: Models.Document;
   userId: string;
+  showName?: boolean;
 }
 
-const PostStats = ({ post, userId }: PostStatsProps) => {
+const PostStats = ({ post, userId, showName = false }: PostStatsProps) => {
   const likesList = post?.likes.map((user: Models.Document) => user.$id);
-
   const [likes, setLikes] = useState(likesList);
   const [isSaved, setIsSaved] = useState(false);
+  const { data: likedUser1 } = useGetUserById(likesList[0]);
+  const { data: likedUser2 } = useGetUserById(likesList[1]);
 
   const { data: currentUser } = useGetCurrentUser();
   const { mutate: likePost } = useLikePost();
@@ -63,7 +67,7 @@ const PostStats = ({ post, userId }: PostStatsProps) => {
 
   return (
     <div className="z-20 flex items-center justify-between">
-      <div className="mr-5 flex gap-2">
+      <div className="mr-5 flex items-center justify-center gap-2">
         <img
           src={
             checkIsLiked(likes, userId)
@@ -77,6 +81,38 @@ const PostStats = ({ post, userId }: PostStatsProps) => {
           className="cursor-pointer"
         />
         <p className="small-medium lg:base-medium">{likes.length}</p>
+        {showName && (
+          <div className="subtle-semibold flex gap-1 text-sm text-light-3">
+            Liked by
+            <Link to={`/profile/${likedUser1?.$id}`}>
+              <p className="underline-offset-2 hover:text-white">
+                {likedUser1 && likedUser1.name}
+              </p>
+            </Link>
+            {likesList.length === 2 && (
+              <>
+                and{" "}
+                <Link to={`/profile/${likedUser2?.$id}`}>
+                  <p className="underline-offset-2  hover:text-white">
+                    {likedUser2 && likedUser2.name}
+                  </p>
+                </Link>
+                {""}
+              </>
+            )}
+            {likesList.length > 2 && (
+              <>
+                and other{""}
+                <Link to={""}>
+                  <p className="underline-offset-2 hover:underline">
+                    {likesList.length - 1}
+                  </p>
+                </Link>
+                {""}
+              </>
+            )}
+          </div>
+        )}
       </div>
       <div className="flex gap-2">
         {isDeletingSavedPost || isSavingPost ? (
