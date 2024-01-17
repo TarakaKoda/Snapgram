@@ -31,7 +31,7 @@ const LeftSideBar = () => {
           <img
             src={user.imageUrl || "assets/icons/profile-placeholder.svg"}
             alt="profile"
-            className="f-14 w-14 rounded-full"
+            className="h-14 w-14 object-cover rounded-full"
           />
           <div className="flex flex-col ">
             <p className="body-bold">{user.name}</p>
