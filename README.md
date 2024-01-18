@@ -749,11 +749,59 @@ Assets used in the project are [here](https://drive.google.com/file/d/13_7FofRAC
     <tr>
       <td>
         <p align="left">Desktop View 💻</p>
-        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/889d55ce-9c00-4c38-91eb-6c736163e0a9" alt="Signup Page" height="300">
+        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/889d55ce-9c00-4c38-91eb-6c736163e0a9" alt="Sign in Page" height="300">
       </td>
       <td>
         <p align="left">Mobile View 📱</p>
-        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/a48e1588-c305-4941-bf49-b08ca020aaf2" height="300">
+        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/a48e1588-c305-4941-bf49-b08ca020aaf2" alt="Sign in Page Mobile view" height="300">
+      </td>
+    </tr>
+  </table>
+  <br />
+</div>
+<div align="center">
+  <table>
+    <tr>
+      <th colspan="2">🏠 HOME PAGE</th>
+    </tr>
+    <tr align="center">
+      <td colspan="2">
+        <p align="left">Desktop View 💻</p>
+        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/49d037ec-8dec-4c6d-8d96-c1e47afc214b" alt="Home Page Desktop View" height="400" width="800">
+      </td>
+    </tr>
+    <tr align="center">
+      <td>
+        <p align="left">Tablet View 📱</p>
+        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/492979af-c7fb-4ea8-be6f-028cc2f6f89b" alt="Home Page Tablet View" height="400" width="500">
+      </td>
+      <td>
+        <p align="left">Mobile View 📱</p>
+        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/5b31c399-2f36-4dd0-aed7-879da6edd8e5" alt="Home Page Mobile View" height="400" width="200">
+      </td>
+    </tr>
+  </table>
+  <br />
+</div>
+<div align="center">
+  <table>
+    <tr>
+      <th colspan="2">❤️ Like Functionality</th>
+    </tr>
+    <tr align="center">
+      <td>
+        <p align="left">Mobile View 📱</p>
+        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/82ea7bba-b52f-46bc-aaee-cf527b4f17da" alt="Post Mobile View" height="500" width="300">
+      </td>
+      <td>
+        <p align="left">Tablet View 📱</p>
+        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/e50c2830-940f-4878-9081-0ee54ae40dd3" alt="Liked Post Tablet View" height="500" width="400">
+      </td>
+    </tr>
+    <tr align="center">
+      <td colspan="2">
+        <p align="left">Desktop View 💻</p>
+        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/d4b57239-3847-488b-8960-473cecf3f71b" alt="All Users who liked the post Desktop View" height="400" width="800">
       </td>
     </tr>
   </table>

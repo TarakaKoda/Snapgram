@@ -5,7 +5,7 @@ import {
   useGetUserPosts,
   useDeletePost,
 } from "@/lib/react-query/queriesAndMutations";
-import { multiFormatDateString } from "@/lib/utils";
+import { formatDateString} from "@/lib/utils";
 import { useUserContext } from "@/context/AuthContext";
 import { Button } from "@/components/ui/button";
 import { Loader } from "@/components/shared";
@@ -80,7 +80,7 @@ const PostDetails = () => {
                   </p>
                   <div className="flex items-center justify-start gap-2 text-light-3">
                     <p className="subtle-semibold lg:small-regular ">
-                      {multiFormatDateString(post?.$createdAt)}
+                      {formatDateString(post?.$createdAt)}
                     </p>
                     •
                     <p className="subtle-semibold lg:small-regular">
