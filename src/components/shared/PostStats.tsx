@@ -23,8 +23,6 @@ const PostStats = ({ post, userId, showName = false }: PostStatsProps) => {
   const [likes, setLikes] = useState(likesList);
   const [isSaved, setIsSaved] = useState(false);
   const { data: likedUser1 } = useGetUserById(likes[0]);
-  const { data: likedUser2 } = useGetUserById(likes[1]);
-
   const { data: currentUser } = useGetCurrentUser();
   const { mutate: likePost } = useLikePost();
   const { mutate: savePost, isPending: isSavingPost } = useSavePost();
@@ -84,28 +82,17 @@ const PostStats = ({ post, userId, showName = false }: PostStatsProps) => {
         <p className="small-medium lg:base-medium">{likes.length}</p>
         {showName && (
           <div
-            className={`subtle-semibold flex gap-1 text-sm text-light-3 ${
+            className={`subtle-semibold flex gap-1 text-nowrap text-sm text-light-3 ${
               !likes.length && "hidden"
             }`}
           >
             <LikedUsersList likedUsersList={likes} trigger="Liked by"/>
             <Link to={`/profile/${likedUser1?.$id}`}>
-              <p className="underline-offset-2 hover:text-white">
+              <p className="underline-offset-2 line-clamp-1 text-wrap hover:text-white">
                 {likedUser1 && likedUser1.name}
               </p>
             </Link>
-            {likes.length === 2 && (
-              <>
-                and{" "}
-                <Link to={`/profile/${likedUser2?.$id}`}>
-                  <p className="underline-offset-2  hover:text-white">
-                    {likedUser2 && likedUser2.name}
-                  </p>
-                </Link>
-                {""}
-              </>
-            )}
-            {likes.length > 2 && (
+            {likes.length > 1 && (
               <>
                 and
                 <LikedUsersList likedUsersList={likes} trigger="other" likedUserLength={likes.length - 1}/>

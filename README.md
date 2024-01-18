@@ -25,7 +25,7 @@
 4. 🤸 [Quick Start](#quick-start)
 5. 🕸️ [Snippets](#snippets)
 6. 🔗 [Links](#links)
-7. 🚀 [](#more)
+7. 📸 [Screenshots](#screenshots)
 
 ## <a name="introduction">🤖 Introduction</a>
 
@@ -722,4 +722,43 @@ export const checkIsLiked = (likeList: string[], userId: string) => {
 Assets used in the project are [here](https://drive.google.com/file/d/13_7FofRAC3wARqPtAVPi53QNJJRd5RH_/view?usp=sharing)
 
 ## <a name="screenshots"> 📸 Screenshots </a>
+
+<div align="center">
+  <table>
+    <tr>
+      <th colspan="2">📄 SIGN UP PAGE</th>
+    </tr>
+    <tr>
+      <td>
+        <p align="left">Desktop View 💻</p>
+        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/057b6e3f-295e-467f-a2bb-3ac1672f8b54" alt="Signup Page" height="400">
+      </td>
+      <td>
+        <p align="left">Mobile View 📱</p>
+        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/ade655d8-ea27-4038-b3be-e498183cd01c" alt="Signup Page Mobile View" height="400">
+      </td>
+    </tr>
+  </table>
+  <br />
+</div>
+<div align="center">
+  <table>
+    <tr>
+      <th colspan="2">📃 SIGN IN PAGE</th>
+    </tr>
+    <tr>
+      <td>
+        <p align="left">Desktop View 💻</p>
+        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/889d55ce-9c00-4c38-91eb-6c736163e0a9" alt="Signup Page" height="400">
+      </td>
+      <td>
+        <p align="left">Mobile View 📱</p>
+        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/a48e1588-c305-4941-bf49-b08ca020aaf2" height="400">
+      </td>
+    </tr>
+  </table>
+  <br />
+</div>
+
+
 

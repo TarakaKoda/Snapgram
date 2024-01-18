@@ -7,7 +7,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import LikedUser from "./LikedUser";
-import { useGetCurrentUser } from "@/lib/react-query/queriesAndMutations";
+
 
 interface LikedUsersListProps {
   likedUsersList: string[];
@@ -20,13 +20,12 @@ const LikedUsersList = ({
   trigger,
   likedUserLength,
 }: LikedUsersListProps) => {
-  const { data: currentUser } = useGetCurrentUser();
 
   const allUsers = trigger === "Liked by";
 
   if (!allUsers) {
     likedUsersList = likedUsersList.filter(
-      (userId) => userId !== currentUser?.$id,
+      (userId) => userId !== likedUsersList[0],
     );
   }
 
