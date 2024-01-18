@@ -735,7 +735,7 @@ Assets used in the project are [here](https://drive.google.com/file/d/13_7FofRAC
       </td>
       <td>
         <p align="left">Mobile View 📱</p>
-        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/ade655d8-ea27-4038-b3be-e498183cd01c" alt="Signup Page Mobile View" height="400">
+        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/ade655d8-ea27-4038-b3be-e498183cd01c" alt="Signup Page Mobile View" height="300">
       </td>
     </tr>
   </table>
@@ -753,7 +753,7 @@ Assets used in the project are [here](https://drive.google.com/file/d/13_7FofRAC
       </td>
       <td>
         <p align="left">Mobile View 📱</p>
-        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/a48e1588-c305-4941-bf49-b08ca020aaf2" height="400">
+        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/a48e1588-c305-4941-bf49-b08ca020aaf2" height="300">
       </td>
     </tr>
   </table>
