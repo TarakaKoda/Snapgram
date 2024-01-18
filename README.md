@@ -731,7 +731,7 @@ Assets used in the project are [here](https://drive.google.com/file/d/13_7FofRAC
     <tr>
       <td>
         <p align="left">Desktop View 💻</p>
-        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/057b6e3f-295e-467f-a2bb-3ac1672f8b54" alt="Signup Page" height="400">
+        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/057b6e3f-295e-467f-a2bb-3ac1672f8b54" alt="Signup Page" height="300">
       </td>
       <td>
         <p align="left">Mobile View 📱</p>
@@ -749,7 +749,7 @@ Assets used in the project are [here](https://drive.google.com/file/d/13_7FofRAC
     <tr>
       <td>
         <p align="left">Desktop View 💻</p>
-        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/889d55ce-9c00-4c38-91eb-6c736163e0a9" alt="Signup Page" height="400">
+        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/889d55ce-9c00-4c38-91eb-6c736163e0a9" alt="Signup Page" height="300">
       </td>
       <td>
         <p align="left">Mobile View 📱</p>
