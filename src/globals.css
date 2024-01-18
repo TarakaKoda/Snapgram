@@ -277,4 +277,9 @@
   .shad-button_ghost {
     @apply flex items-center justify-start gap-4 hover:bg-transparent hover:text-white !important;
   }
+
+  .liked_user-card {
+    @apply w-full max-w-screen-sm rounded-xl border border-dark-4 bg-dark-2 p-2 lg:p-4;
+  }
+
 }

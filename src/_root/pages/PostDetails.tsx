@@ -72,13 +72,13 @@ const PostDetails = () => {
                     "/assets/icons/profile-placeholder.svg"
                   }
                   alt="creator"
-                  className="h-8 w-8 object-cover rounded-full lg:h-12 lg:w-12"
+                  className="h-8 w-8 rounded-full object-cover lg:h-12 lg:w-12"
                 />
                 <div className="flex flex-col gap-1">
                   <p className="base-medium lg:body-bold text-light-1">
                     {post?.creator.name}
                   </p>
-                  <div className="flex-center gap-2 text-light-3">
+                  <div className="flex items-center justify-start gap-2 text-light-3">
                     <p className="subtle-semibold lg:small-regular ">
                       {multiFormatDateString(post?.$createdAt)}
                     </p>

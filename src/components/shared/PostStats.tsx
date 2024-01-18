@@ -10,6 +10,7 @@ import { Models } from "appwrite";
 import { useState, useEffect } from "react";
 import Loader from "./Loader";
 import { Link } from "react-router-dom";
+import LikedUsersList from "./LikedUsersList"
 
 interface PostStatsProps {
   post?: Models.Document;
@@ -21,8 +22,8 @@ const PostStats = ({ post, userId, showName = false }: PostStatsProps) => {
   const likesList = post?.likes.map((user: Models.Document) => user.$id);
   const [likes, setLikes] = useState(likesList);
   const [isSaved, setIsSaved] = useState(false);
-  const { data: likedUser1 } = useGetUserById(likesList[0]);
-  const { data: likedUser2 } = useGetUserById(likesList[1]);
+  const { data: likedUser1 } = useGetUserById(likes[0]);
+  const { data: likedUser2 } = useGetUserById(likes[1]);
 
   const { data: currentUser } = useGetCurrentUser();
   const { mutate: likePost } = useLikePost();
@@ -82,14 +83,18 @@ const PostStats = ({ post, userId, showName = false }: PostStatsProps) => {
         />
         <p className="small-medium lg:base-medium">{likes.length}</p>
         {showName && (
-          <div className="subtle-semibold flex gap-1 text-sm text-light-3">
-            Liked by
+          <div
+            className={`subtle-semibold flex gap-1 text-sm text-light-3 ${
+              !likes.length && "hidden"
+            }`}
+          >
+            <LikedUsersList likedUsersList={likes} trigger="Liked by"/>
             <Link to={`/profile/${likedUser1?.$id}`}>
               <p className="underline-offset-2 hover:text-white">
                 {likedUser1 && likedUser1.name}
               </p>
             </Link>
-            {likesList.length === 2 && (
+            {likes.length === 2 && (
               <>
                 and{" "}
                 <Link to={`/profile/${likedUser2?.$id}`}>
@@ -100,15 +105,10 @@ const PostStats = ({ post, userId, showName = false }: PostStatsProps) => {
                 {""}
               </>
             )}
-            {likesList.length > 2 && (
+            {likes.length > 2 && (
               <>
-                and other{""}
-                <Link to={""}>
-                  <p className="underline-offset-2 hover:underline">
-                    {likesList.length - 1}
-                  </p>
-                </Link>
-                {""}
+                and
+                <LikedUsersList likedUsersList={likes} trigger="other" likedUserLength={likes.length - 1}/>
               </>
             )}
           </div>
