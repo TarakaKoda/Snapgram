@@ -75,7 +75,7 @@ const PostDetails = () => {
                   className="h-8 w-8 rounded-full object-cover lg:h-12 lg:w-12"
                 />
                 <div className="flex flex-col gap-1">
-                  <p className="base-medium lg:body-bold text-light-1">
+                  <p className="base-medium max-sm:small-medium text-nowrap lg:body-bold text-light-1">
                     {post?.creator.name}
                   </p>
                   <div className="flex items-center justify-start gap-2 text-light-3">
@@ -90,7 +90,7 @@ const PostDetails = () => {
                 </div>
               </Link>
 
-              <div className="flex-center gap-4">
+              <div className="sm:flex-center max-sm:flex max-sm:gap-2 justify-around gap-4">
                 <Link
                   to={`/update-post/${post?.$id}`}
                   className={`${user.id !== post?.creator.$id && "hidden"}`}
@@ -106,7 +106,7 @@ const PostDetails = () => {
                 <Button
                   onClick={handleDeletePost}
                   variant="ghost"
-                  className={`ost_details-delete_btn ${
+                  className={`post_details-delete_btn items-start ${
                     user.id !== post?.creator.$id && "hidden"
                   }`}
                 >

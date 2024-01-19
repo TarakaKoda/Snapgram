@@ -791,11 +791,11 @@ Assets used in the project are [here](https://drive.google.com/file/d/13_7FofRAC
     <tr align="center">
       <td>
         <p align="left">Mobile View 📱</p>
-        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/82ea7bba-b52f-46bc-aaee-cf527b4f17da" alt="Post Mobile View" height="500" width="300">
+        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/f4e5c290-a9f5-4cab-969f-70a24ec23e7a" alt="Post Mobile View" height="500" width="250">
       </td>
       <td>
         <p align="left">Tablet View 📱</p>
-        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/e50c2830-940f-4878-9081-0ee54ae40dd3" alt="Liked Post Tablet View" height="500" width="400">
+        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/0a98187d-72d1-4e53-82fb-49079898a14b" alt="Liked Post Tablet View" height="500" width="400">
       </td>
     </tr>
     <tr align="center">
@@ -807,6 +807,124 @@ Assets used in the project are [here](https://drive.google.com/file/d/13_7FofRAC
   </table>
   <br />
 </div>
-
-
+<div align="center">
+  <table>
+    <tr>
+      <th colspan="2">💾 Save Functionality</th>
+    </tr>
+    <tr align="center">
+      <td>
+        <p align="left">Mobile View 📱</p>
+        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/33c00014-a179-488e-b69c-b8d0882a59bb" alt="Saving a Post Mobile View" height="500" width="250">
+      </td>
+      <td>
+        <p align="left">Tablet View 📱</p>
+        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/ee340693-501a-4c93-8a5a-fa29187da59f" alt="Saved Post Tablet View" height="500" width="400">
+      </td>
+    </tr>
+    <tr align="center">
+      <td colspan="2">
+        <p align="left">Desktop View 💻</p>
+        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/ee58bb97-c573-40f4-a260-a661423ef839" alt="Saved Posts Page Desktop View" height="400" width="800">
+      </td>
+    </tr>
+  </table>
+  <br />
+</div>
+<div align="center">
+  <table>
+    <tr>
+      <th colspan="2">🖼️ Detailed Post</th>
+    </tr>
+    <tr align="center">
+      <td colspan="2">
+        <p align="left">Desktop View 💻</p>
+        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/a80db91a-d179-4be0-a7cf-28836d930162" alt="Post details Desktop View" height="400" width="800">
+      </td>
+    </tr>
+    <tr align="center">
+      <td>
+        <p align="left">Tablet View 📱</p>
+        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/7863fbc3-f5fb-49ff-9651-05daedbc1ba1" alt="Post Details Tablet View" height="500" width="400">
+      </td>
+      <td>
+        <p align="left">Mobile View 📱</p>
+        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/96129d39-5b17-4c01-807a-c1f87c295336" alt="Post Details Mobile View" height="500" width="250">
+      </td>
+    </tr>
+  </table>
+  <br />
+</div>
+<div align="center">
+  <table>
+    <tr>
+      <th colspan="2">👤 Profile & 📝 Edit Profile </th>
+    </tr>
+    <tr align="center">
+      <td colspan="2">
+        <p align="left">Desktop View 💻</p>
+        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/6a7d45da-63c5-49aa-ba31-d8062ad7e77c" alt="Profile Desktop View" height="400" width="800">
+      </td>
+    </tr>
+    <tr align="center">
+      <td>
+        <p align="left">Mobile View 📱</p>
+        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/9ef9cf96-6f01-417a-98d5-8ff17a1c06ba" alt="Profile Mobile View" height="500" width="250">
+      </td>
+      <td>
+        <p align="left">Tablet View 📱</p>
+        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/4d0c7041-2cf5-4797-aed6-7909fcee01b1" alt="Edit Profile Tablet View" height="500" width="400">
+      </td>
+    </tr>
+  </table>
+  <br />
+</div>
+<div align="center">
+  <table>
+    <tr>
+      <th colspan="2">👥 All Users </th>
+    </tr>
+    <tr align="center">
+      <td>
+        <p align="left">Mobile View 📱</p>
+        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/f2b0a053-9e52-4c70-8187-05e58be382da" alt="All Users Mobile View" height="500" width="230">
+      </td>
+      <td>
+        <p align="left">Tablet View 📱</p>
+        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/a788d633-7a22-4751-bd17-12cc5f118af1" alt="All Users Tablet View" height="500" width="400">
+      </td>
+    </tr>
+    <tr align="center">
+      <td colspan="2">
+        <p align="left">Desktop View 💻</p>
+        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/e62fcf60-475b-43a0-a7d7-429bd3f7074f" alt="All Users Desktop View" height="400" width="800">
+      </td>
+    </tr>
+  </table>
+  <br />
+</div>
+<div align="center">
+  <table>
+    <tr>
+      <th colspan="2">🖼️ Create & 📝 Update Post </th>
+    </tr>
+    <tr align="center">
+      <td>
+        <p align="left">Mobile View 📱</p>
+        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/cfb28a2a-2b3d-4216-8e98-98d4d2e66524" alt="Create Post Mobile View" height="500" width="230">
+      </td>
+      <td>
+        <p align="left">Tablet View 📱</p>
+        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/171a3e9e-a4e0-47fb-9f7a-e5b16bf20327" alt="Create Post Tablet View" height="500" width="400">
+      </td>
+    </tr>
+    <tr align="center">
+      <td colspan="2">
+        <p align="left">Desktop View 💻</p>
+        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/d73c9629-a483-41ee-8ba6-7cc4e50e479a" alt="Update Post Desktop View" height="500" width="800">
+      </td>
+    </tr>
+  </table>
+  <br />
+</div>
 
