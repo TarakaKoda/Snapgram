@@ -10,7 +10,7 @@ import { Models } from "appwrite";
 import { useState, useEffect } from "react";
 import Loader from "./Loader";
 import { Link } from "react-router-dom";
-import LikedUsersList from "./LikedUsersList"
+import LikedUsersList from "./LikedUsersList";
 
 interface PostStatsProps {
   post?: Models.Document;
@@ -86,22 +86,30 @@ const PostStats = ({ post, userId, showName = false }: PostStatsProps) => {
               !likes.length && "hidden"
             }`}
           >
-            <LikedUsersList likedUsersList={likes} trigger="Liked by"/>
+            <LikedUsersList likedUsersList={likes} trigger="Liked by" />
             <Link to={`/profile/${likedUser1?.$id}`}>
-              <p className="underline-offset-2 line-clamp-1 text-wrap hover:text-white">
+              <p className="line-clamp-1 text-wrap underline-offset-2 hover:text-white">
                 {likedUser1 && likedUser1.name}
               </p>
             </Link>
             {likes.length > 1 && (
               <>
                 and
-                <LikedUsersList likedUsersList={likes} trigger="other" likedUserLength={likes.length - 1}/>
+                <LikedUsersList
+                  likedUsersList={likes}
+                  trigger="other"
+                  likedUserLength={likes.length - 1}
+                />
               </>
             )}
           </div>
         )}
       </div>
-      <div className="flex gap-2">
+      <div className="flex gap-5">
+        <div className="flex gap-2">
+          <img src="/assets/icons/chat.svg" alt="comment" />
+          <p>{post?.comments.length}</p>
+        </div>
         {isDeletingSavedPost || isSavingPost ? (
           <Loader />
         ) : (
