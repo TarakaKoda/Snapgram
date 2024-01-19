@@ -75,22 +75,22 @@ const PostDetails = () => {
                   className="h-8 w-8 rounded-full object-cover lg:h-12 lg:w-12"
                 />
                 <div className="flex flex-col gap-1">
-                  <p className="base-medium max-sm:small-medium text-nowrap lg:body-bold text-light-1">
+                  <p className="base-medium max-sm:small-medium text-nowrap max-lg:text-[14px] lg:body-bold text-light-1">
                     {post?.creator.name}
                   </p>
-                  <div className="flex items-center justify-start gap-2 text-light-3">
-                    <p className="subtle-semibold lg:small-regular ">
+                  <div className="flex items-center justify-start gap-2 text-light-3 text-nowrap">
+                    <p className="subtle-semibold lg:small-regular md:text-[10px] max-sm:text-[12px]">
                       {formatDateString(post?.$createdAt)}
                     </p>
                     •
-                    <p className="subtle-semibold lg:small-regular">
+                    <p className="subtle-semibold lg:small-regular md:text-[10px] max-sm:text-[12px]">
                       {post?.location}
                     </p>
                   </div>
                 </div>
               </Link>
 
-              <div className="sm:flex-center max-sm:flex max-sm:gap-2 justify-around gap-4">
+              <div className="flex  h-6 self-start sm:justify-end max-lg:pl-3 max-lg:gap-3 lg:gap-4">
                 <Link
                   to={`/update-post/${post?.$id}`}
                   className={`${user.id !== post?.creator.$id && "hidden"}`}
