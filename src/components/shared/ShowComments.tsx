@@ -1,18 +1,25 @@
 import { useGetPostComments } from "@/lib/react-query/queriesAndMutations";
 import CommentCard from "./CommentCard";
+import { Loader } from ".";
 
 interface ShowCommentProps {
-  postId: string;
+  postId?: string;
 }
 const ShowComments = ({ postId }: ShowCommentProps) => {
-  const { data: comments } = useGetPostComments(postId);
+  const { data: comments, isPending: isCommentCreating } = useGetPostComments(
+    postId || "",
+  );
 
   return (
-    <div className="">
-      {comments?.documents.map((comment) => (
-        <CommentCard comment={comment} key={comment.$id} />
-      ))}
-    </div>
+    <>
+      {isCommentCreating ? (
+        <Loader />
+      ) : (
+        comments?.documents.map((comment) => (
+          <CommentCard comment={comment} key={comment.$id} />
+        ))
+      )}
+    </>
   );
 };
 

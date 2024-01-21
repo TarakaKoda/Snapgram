@@ -12,6 +12,7 @@ import { Loader } from "@/components/shared";
 import PostStats from "@/components/shared/PostStats";
 import GridPostList from "@/components/shared/GridPostList";
 import ShowComments from "@/components/shared/ShowComments";
+import CreateComment from "@/components/shared/CreateComment";
 
 const PostDetails = () => {
   const navigate = useNavigate();
@@ -140,6 +141,7 @@ const PostDetails = () => {
             </div>
             <div className="w-full">
               <PostStats post={post} userId={user.id} showName={true} />
+              <CreateComment userId={user.id} post={post}/>
             </div>
           </div>
         </div>

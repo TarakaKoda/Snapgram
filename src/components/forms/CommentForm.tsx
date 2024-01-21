@@ -9,15 +9,15 @@ import { useUserContext } from "@/context/AuthContext";
 import { CommentValidation } from "@/lib/validation";
 import { useCreateComment } from "@/lib/react-query/queriesAndMutations";
 import { useToast } from "../ui/use-toast";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import { Loader } from "../shared";
 
 interface CommentFormProps {
-  postId: string;
+  postId?: string;
 }
 
 const CommentForm = ({ postId }: CommentFormProps) => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const { toast } = useToast();
   const { user } = useUserContext();
   const { mutateAsync: createComment, isPending: isCreatingComment } =
@@ -33,7 +33,7 @@ const CommentForm = ({ postId }: CommentFormProps) => {
   // 2. Define a submit handler.
   function onSubmit(values: z.infer<typeof CommentValidation>) {
     const newComment = createComment({
-      postId: postId,
+      postId: postId || "",
       userId: user.id,
       parentCommentID: null,
       comment_text: values.comment_text,
@@ -42,7 +42,7 @@ const CommentForm = ({ postId }: CommentFormProps) => {
     if (!newComment) {
       toast({ title: "Please try again." });
     }
-    return navigate(`/posts/${postId}`);
+    // return navigate(`/posts/${postId}`);
   }
   return (
     <Form {...form}>
@@ -73,8 +73,7 @@ const CommentForm = ({ postId }: CommentFormProps) => {
             <img
               src="/assets/images/comment-arrow.png"
               alt="comment arrow"
-              width={18}
-              height={18}
+              className="lg:min-w-4 w-4 h-4 lg:min-h-4"
             />
           </Button>
         )}

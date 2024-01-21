@@ -11,6 +11,7 @@ import { useState, useEffect } from "react";
 import Loader from "./Loader";
 import { Link } from "react-router-dom";
 import LikedUsersList from "./LikedUsersList";
+import CommentsDialog from "./CommentsDialog";
 
 interface PostStatsProps {
   post?: Models.Document;
@@ -106,10 +107,10 @@ const PostStats = ({ post, userId, showName = false }: PostStatsProps) => {
         )}
       </div>
       <div className="flex gap-5">
-        <div className="flex gap-2">
-          <img src="/assets/icons/chat.svg" alt="comment" />
-          <p>{post?.comments.length}</p>
-        </div>
+        <CommentsDialog
+          post={post}
+          commentsLength={post?.comments.length}
+        />
         {isDeletingSavedPost || isSavingPost ? (
           <Loader />
         ) : (

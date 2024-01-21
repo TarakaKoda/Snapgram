@@ -157,7 +157,7 @@
   }
 
   .post_details-img {
-    @apply h-80 rounded-t-[30px] bg-dark-1 object-cover p-5 lg:h-[480px] xl:w-[48%] xl:rounded-l-[24px] xl:rounded-tr-none;
+    @apply  h-80 rounded-t-[30px] bg-dark-1 object-cover p-5 lg:h-[550px] xl:w-[48%] xl:rounded-l-[24px] xl:rounded-tr-none;
   }
 
   .post_details-info {
@@ -246,7 +246,10 @@
   }
 
   .comments-container {
-    @apply custom-scrollbar overflow-y-auto h-44 w-full
+    @apply custom-scrollbar overflow-y-auto h-auto max-h-44  w-full
+  }
+  .comments-dialog {
+    @apply custom-scrollbar overflow-y-auto w-full h-auto max-h-80
   }
 }
 

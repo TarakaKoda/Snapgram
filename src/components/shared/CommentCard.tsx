@@ -6,7 +6,7 @@ interface CommentCardProps {
 }
 const CommentCard = ({ comment }: CommentCardProps) => {
   return (
-    <div className="flex gap-2 border-y border-dark-4  py-4">
+    <div className="flex gap-2  py-4">
       <img
         className="h-8 w-8 rounded-full object-cover"
         src={comment.user.imageUrl}

@@ -2,8 +2,9 @@ import { useUserContext } from "@/context/AuthContext";
 import { multiFormatDateString } from "@/lib/utils";
 import { Models } from "appwrite";
 import { Link } from "react-router-dom";
-import PostStats from "./PostStats";
 import CreateComment from "./CreateComment";
+import PostStats from "./PostStats";
+import ShowComments from "./ShowComments";
 
 interface PostCardProps {
   post: Models.Document;
@@ -23,7 +24,7 @@ const PostCard = ({ post }: PostCardProps) => {
                 "/assets/icons/profile-placeholder.svg"
               }
               alt="creator"
-              className="w-12 h-12 rounded-full object-cover"
+              className="h-12 w-12 rounded-full object-cover"
             />
           </Link>
           <div className="flex flex-col">
@@ -66,7 +67,10 @@ const PostCard = ({ post }: PostCardProps) => {
         />
       </Link>
       <PostStats post={post} userId={user.id} showName={true} />
-      <CreateComment userId={user.id} post={post}/>
+      {post.comments.length > 0 && <div className="comments-container">
+        <ShowComments postId={post.$id} />
+      </div>}
+      <CreateComment userId={user.id} post={post} />
     </div>
   );
 };

@@ -151,7 +151,7 @@ export const useGetCurrentUser = () => {
 
 export const useGetPostById = (postId: string) => {
   return useQuery({
-    queryKey: [QUERY_KEYS.GET_POST_BY_ID, postId],
+    queryKey: [QUERY_KEYS.GET_POST_BY_ID, QUERY_KEYS.GET_COMMENTS, postId],
     queryFn: () => getPostById(postId),
     enabled: !!postId,
   });
@@ -281,7 +281,7 @@ export const useCreateComment = () => {
 
 export const useGetPostComments = (postId: string) => {
   return useQuery({
-    queryKey: [QUERY_KEYS.GET_POST_COMMENTS, postId],
+    queryKey: [QUERY_KEYS.GET_COMMENTS, postId],
     queryFn: () => getPostComments(postId),
     enabled: !!postId,
   });
