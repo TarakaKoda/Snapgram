@@ -4,10 +4,10 @@ import { Models } from "appwrite";
 
 interface CommentProps {
   userId: string;
-  post: Models.Document; 
+  post: Models.Document;
 }
 
-const Comment = ({ userId, post}: CommentProps) => {
+const CreateComment = ({ userId, post }: CommentProps) => {
   const { data: currentUser } = useGetUserById(userId);
   return (
     <div className="z-20 flex items-center justify-between">
@@ -15,7 +15,7 @@ const Comment = ({ userId, post}: CommentProps) => {
         <img
           src={currentUser?.imageUrl}
           alt="user"
-          className="h-10 w-10 rounded-full object-cover"
+          className="max-h-10 min-w-10 rounded-full object-cover"
         />
         <CommentForm postId={post.$id} />
       </div>
@@ -23,4 +23,4 @@ const Comment = ({ userId, post}: CommentProps) => {
   );
 };
 
-export default Comment;
+export default CreateComment;

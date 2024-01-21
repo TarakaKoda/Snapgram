@@ -1,5 +1,11 @@
 import { ID, Query } from "appwrite";
-import { INewPost, INewUser, IUpdatePost, IUpdateUser } from "@/types";
+import {
+  IComment,
+  INewPost,
+  INewUser,
+  IUpdatePost,
+  IUpdateUser,
+} from "@/types";
 import { account, appwriteConfig, avatars, storage, databases } from "./config";
 
 export async function createUserAccount(user: INewUser) {
@@ -466,7 +472,7 @@ export async function updateUser(user: IUpdateUser) {
         bio: user.bio,
         imageUrl: image.imageUrl,
         imageId: image.imageId,
-      }
+      },
     );
 
     // Failed to update
@@ -497,12 +503,51 @@ export async function getUserPosts(userId?: string) {
     const post = await databases.listDocuments(
       appwriteConfig.databaseId,
       appwriteConfig.postCollectionId,
-      [Query.equal("creator", userId), Query.orderDesc("$createdAt")]
+      [Query.equal("creator", userId), Query.orderDesc("$createdAt")],
     );
 
     if (!post) throw Error;
 
     return post;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+export async function createComment(comment: IComment) {
+  try {
+    const newComment = await databases.createDocument(
+      appwriteConfig.databaseId,
+      appwriteConfig.commentCollectionId,
+      ID.unique(),
+      {
+        post: comment.postId,
+        user: comment.userId,
+        comment_text: comment.comment_text,
+        parentCommentID: comment.parentCommentID,
+      },
+    );
+
+    if (!newComment) {
+      throw Error;
+    }
+    return newComment;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+export async function getPostComments(postId: string) {
+  if (!postId) return;
+  try {
+    const comments = await databases.listDocuments(
+      appwriteConfig.databaseId,
+      appwriteConfig.commentCollectionId,
+      [Query.equal("post", postId), Query.orderDesc("$createdAt")],
+    );
+
+    if (!comments) throw Error;
+    return comments;
   } catch (error) {
     console.log(error);
   }

@@ -5,12 +5,13 @@ import {
   useGetUserPosts,
   useDeletePost,
 } from "@/lib/react-query/queriesAndMutations";
-import { formatDateString} from "@/lib/utils";
+import { formatDateString } from "@/lib/utils";
 import { useUserContext } from "@/context/AuthContext";
 import { Button } from "@/components/ui/button";
 import { Loader } from "@/components/shared";
 import PostStats from "@/components/shared/PostStats";
 import GridPostList from "@/components/shared/GridPostList";
+import ShowComments from "@/components/shared/ShowComments";
 
 const PostDetails = () => {
   const navigate = useNavigate();
@@ -75,22 +76,22 @@ const PostDetails = () => {
                   className="h-8 w-8 rounded-full object-cover lg:h-12 lg:w-12"
                 />
                 <div className="flex flex-col gap-1">
-                  <p className="base-medium max-sm:small-medium text-nowrap max-lg:text-[14px] lg:body-bold text-light-1">
+                  <p className="base-medium max-sm:small-medium lg:body-bold text-nowrap text-light-1 max-lg:text-[14px]">
                     {post?.creator.name}
                   </p>
-                  <div className="flex items-center justify-start gap-2 text-light-3 text-nowrap">
-                    <p className="subtle-semibold lg:small-regular md:text-[10px] max-sm:text-[12px]">
+                  <div className="flex items-center justify-start gap-2 text-nowrap text-light-3">
+                    <p className="subtle-semibold lg:small-regular max-sm:text-[12px] md:text-[10px]">
                       {formatDateString(post?.$createdAt)}
                     </p>
                     •
-                    <p className="subtle-semibold lg:small-regular md:text-[10px] max-sm:text-[12px]">
+                    <p className="subtle-semibold lg:small-regular max-sm:text-[12px] md:text-[10px]">
                       {post?.location}
                     </p>
                   </div>
                 </div>
               </Link>
 
-              <div className="flex  h-6 self-start sm:justify-end max-lg:pl-3 max-lg:gap-3 lg:gap-4">
+              <div className="flex  h-6 self-start max-lg:gap-3 max-lg:pl-3 sm:justify-end lg:gap-4">
                 <Link
                   to={`/update-post/${post?.$id}`}
                   className={`${user.id !== post?.creator.$id && "hidden"}`}
@@ -120,8 +121,6 @@ const PostDetails = () => {
               </div>
             </div>
 
-            <hr className="w-full border border-dark-4/80" />
-
             <div className="small-medium lg:base-regular flex w-full flex-1 flex-col">
               <p>{post?.caption}</p>
               <ul className="mt-2 flex gap-1">
@@ -134,8 +133,11 @@ const PostDetails = () => {
                   </li>
                 ))}
               </ul>
+              <hr className="mt-5 w-full border border-dark-4/80" />
             </div>
-
+            <div className="comments-container">
+              <ShowComments postId={post.$id} />
+            </div>
             <div className="w-full">
               <PostStats post={post} userId={user.id} showName={true} />
             </div>

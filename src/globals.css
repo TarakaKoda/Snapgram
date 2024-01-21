@@ -136,7 +136,7 @@
 
   /* Home */
   .home-container {
-    @apply custom-scrollbar min-w-[26.5rem] flex flex-1 flex-col items-center gap-10 overflow-scroll px-5 py-10 md:px-8 lg:p-14;
+    @apply custom-scrollbar flex min-w-[26.5rem] flex-1 flex-col items-center gap-10 overflow-scroll px-5 py-10 md:px-8 lg:p-14;
   }
 
   .home-posts {
@@ -149,7 +149,7 @@
 
   /* Post Details */
   .post_details-container {
-    @apply custom-scrollbar min-w-[26.5rem]  flex flex-1 flex-col items-center gap-10 overflow-scroll px-5 py-10 md:p-14;
+    @apply custom-scrollbar flex  min-w-[26.5rem] flex-1 flex-col items-center gap-10 overflow-scroll px-5 py-10 md:p-14;
   }
 
   .post_details-card {
@@ -170,7 +170,7 @@
 
   /* Profile */
   .profile-container {
-    @apply custom-scrollbar min-w-[26.5rem]  flex flex-1 flex-col items-center gap-10 overflow-scroll px-5 py-10 md:p-14;
+    @apply custom-scrollbar flex  min-w-[26.5rem] flex-1 flex-col items-center gap-10 overflow-scroll px-5 py-10 md:p-14;
   }
 
   .profile-inner_container {
@@ -183,12 +183,12 @@
 
   /* Saved */
   .saved-container {
-    @apply custom-scrollbar flex flex-1 flex-col min-w-[26.5rem] items-center gap-10 overflow-scroll px-5 py-10 md:p-14;
+    @apply custom-scrollbar flex min-w-[26.5rem] flex-1 flex-col items-center gap-10 overflow-scroll px-5 py-10 md:p-14;
   }
 
   /* Bottom bar */
   .bottom-bar {
-    @apply flex-between sticky bottom-0 max-sm:-bottom-4 z-50 w-full min-w-[26.5rem] rounded-t-[20px] bg-dark-2 px-5 py-4 md:hidden;
+    @apply flex-between sticky bottom-0 z-50 w-full min-w-[26.5rem] rounded-t-[20px] bg-dark-2 px-5 py-4 max-sm:-bottom-4 md:hidden;
   }
 
   /* File uploader */
@@ -244,6 +244,10 @@
   .user-card {
     @apply flex-center flex-col gap-4 rounded-[20px] border border-dark-4 px-5 py-8;
   }
+
+  .comments-container {
+    @apply custom-scrollbar overflow-y-auto h-44 w-full
+  }
 }
 
 @layer components {
@@ -281,5 +285,4 @@
   .liked_user-card {
     @apply w-full max-w-screen-sm rounded-xl border border-dark-4 bg-dark-2 p-2 lg:p-4;
   }
-
 }

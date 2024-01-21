@@ -3,7 +3,7 @@ import { multiFormatDateString } from "@/lib/utils";
 import { Models } from "appwrite";
 import { Link } from "react-router-dom";
 import PostStats from "./PostStats";
-import Comment from "./Comment";
+import CreateComment from "./CreateComment";
 
 interface PostCardProps {
   post: Models.Document;
@@ -66,7 +66,7 @@ const PostCard = ({ post }: PostCardProps) => {
         />
       </Link>
       <PostStats post={post} userId={user.id} showName={true} />
-      <Comment userId={user.id} post={post}/>
+      <CreateComment userId={user.id} post={post}/>
     </div>
   );
 };
