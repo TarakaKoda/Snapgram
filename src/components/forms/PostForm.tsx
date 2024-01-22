@@ -72,10 +72,10 @@ const PostForm = ({ post, action }: PostFormProps) => {
       ...values,
       userId: user.id,
     });
-
     if (!newPost) {
       toast({ title: "Please try again." });
     }
+  
     navigate("/");
   }
   return (

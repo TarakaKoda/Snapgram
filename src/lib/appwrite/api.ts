@@ -525,16 +525,18 @@ export async function createComment(comment: IComment) {
         user: comment.userId,
         comment_text: comment.comment_text,
         parentCommentID: comment.parentCommentID,
+        childrenCommentId: comment.childrenCommentId
       },
     );
 
     if (!newComment) {
       throw Error;
     }
-    return newComment;
+    return newComment
   } catch (error) {
     console.log(error);
   }
+
 }
 
 export async function getPostComments(postId: string) {
@@ -543,11 +545,58 @@ export async function getPostComments(postId: string) {
     const comments = await databases.listDocuments(
       appwriteConfig.databaseId,
       appwriteConfig.commentCollectionId,
-      [Query.equal("post", postId), Query.orderDesc("$createdAt")],
+      [Query.equal("post", postId), Query.isNull("parentCommentID"), Query.orderDesc("$createdAt")],
     );
 
     if (!comments) throw Error;
     return comments;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+export async function likedComment(commentId: string, likesArray: string[]) {
+  try {
+    const updateComment = await databases.updateDocument(
+      appwriteConfig.databaseId,
+      appwriteConfig.commentCollectionId,
+      commentId,
+      {
+        likes: likesArray,
+      },
+    );
+    if (!updateComment) throw Error;
+    return updateComment;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+export async function addNestedComment(commentId: string, childrenComment: string[]) {
+  try {
+    const updateComment = await databases.updateDocument(
+      appwriteConfig.databaseId,
+      appwriteConfig.commentCollectionId,
+      commentId,
+      {
+       childrenCommentId: childrenComment,
+      },
+    );
+    if (!updateComment) throw Error;
+    return updateComment;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+export async function getCommentById(commentId: string) {
+  try {
+    const comment = await databases.getDocument(
+      appwriteConfig.databaseId,
+      appwriteConfig.commentCollectionId,
+      commentId,
+    );
+    return comment;
   } catch (error) {
     console.log(error);
   }

@@ -1,6 +1,6 @@
 import { useGetPostComments } from "@/lib/react-query/queriesAndMutations";
-import CommentCard from "./CommentCard";
 import { Loader } from ".";
+import CommentCard from "./CommentCard";
 
 interface ShowCommentProps {
   postId?: string;
@@ -9,7 +9,6 @@ const ShowComments = ({ postId }: ShowCommentProps) => {
   const { data: comments, isPending: isCommentCreating } = useGetPostComments(
     postId || "",
   );
-
   return (
     <>
       {isCommentCreating ? (

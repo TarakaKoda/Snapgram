@@ -61,4 +61,5 @@ export type IComment = {
   userId: string;
   comment_text: string;
   parentCommentID: string | null;
+  childrenCommentId: string[] | null
 };

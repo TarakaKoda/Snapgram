@@ -105,24 +105,24 @@ const PostDetails = () => {
                   />
                 </Link>
 
-                <Button
-                  onClick={handleDeletePost}
-                  variant="ghost"
-                  className={`post_details-delete_btn items-start ${
-                    user.id !== post?.creator.$id && "hidden"
-                  }`}
-                >
-                  <img
-                    src={"/assets/icons/delete.svg"}
-                    alt="delete"
-                    width={24}
-                    height={24}
-                  />
-                </Button>
+                {user.id === post?.creator.$id && (
+                  <Button
+                    onClick={handleDeletePost}
+                    variant="ghost"
+                    className="post_details-delete_btn items-start"
+                  >
+                    <img
+                      src={"/assets/icons/delete.svg"}
+                      alt="delete"
+                      width={24}
+                      height={24}
+                    />
+                  </Button>
+                )}
               </div>
             </div>
 
-            <div className="small-medium lg:base-regular flex w-full flex-1 flex-col">
+            <div className="small-medium lg:base-regular flex w-full flex-col">
               <p>{post?.caption}</p>
               <ul className="mt-2 flex gap-1">
                 {post?.tags.map((tag: string, index: string) => (
@@ -141,7 +141,7 @@ const PostDetails = () => {
             </div>
             <div className="w-full">
               <PostStats post={post} userId={user.id} showName={true} />
-              <CreateComment userId={user.id} post={post}/>
+              <CreateComment userId={user.id} post={post} />
             </div>
           </div>
         </div>

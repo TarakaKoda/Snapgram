@@ -5,11 +5,13 @@ import {
   useInfiniteQuery,
 } from "@tanstack/react-query";
 import {
+  addNestedComment,
   createComment,
   createPost,
   createUserAccount,
   deletePost,
   deleteSavedPost,
+  getCommentById,
   getCurrentUser,
   getInfinitePosts,
   getInfiniteSavedPosts,
@@ -21,6 +23,7 @@ import {
   getUserPosts,
   getUsers,
   likePost,
+  likedComment,
   savePost,
   searchPosts,
   signInAccount,
@@ -183,7 +186,7 @@ export const useDeletePost = () => {
 
 export const useGetPosts = () => {
   return useInfiniteQuery({
-    queryKey: [QUERY_KEYS.GET_INFINITE_POSTS],
+    queryKey: [QUERY_KEYS.GET_INFINITE_POSTS, QUERY_KEYS.GET_POST_COMMENTS],
     queryFn: getInfinitePosts as any,
     getNextPageParam: (lastPage: any) => {
       if (lastPage && lastPage.documents.length === 0) return null;
@@ -270,7 +273,9 @@ export const useGetUserPosts = (userId?: string) => {
 export const useCreateComment = () => {
   const queryClient = useQueryClient();
   return useMutation({
-    mutationFn: (comment: IComment) => createComment(comment),
+    mutationFn: (comment: IComment) => {
+      return createComment(comment);
+    },
     onSuccess: () => {
       queryClient.invalidateQueries({
         queryKey: [QUERY_KEYS.GET_COMMENTS],
@@ -286,3 +291,66 @@ export const useGetPostComments = (postId: string) => {
     enabled: !!postId,
   });
 };
+
+export const useLikeComment = () => {
+  const queryClient = useQueryClient();
+
+  return useMutation({
+    mutationFn: ({
+      commentId,
+      likesArray,
+    }: {
+      commentId: string;
+      likesArray: string[];
+    }) => likedComment(commentId, likesArray),
+    onSuccess: (data) => {
+      queryClient.invalidateQueries({
+        queryKey: [QUERY_KEYS.GET_COMMENTS, data?.$id],
+      });
+      queryClient.invalidateQueries({
+        queryKey: [QUERY_KEYS.GET_POST_COMMENTS],
+      });
+      queryClient.invalidateQueries({
+        queryKey: [QUERY_KEYS.GET_POSTS],
+      });
+      queryClient.invalidateQueries({
+        queryKey: [QUERY_KEYS.GET_CURRENT_USER],
+      });
+    },
+  });
+};
+
+export const useGetCommentById = (commentId: string) => {
+  return useQuery({
+    queryKey: [QUERY_KEYS.GET_COMMENT_BY_ID, commentId],
+    queryFn: () => getCommentById(commentId),
+    enabled: !!commentId,
+  });
+};
+
+export const useNestedComment = () => {
+  const queryClient = useQueryClient();
+  return useMutation({
+    mutationFn: ({
+      commentId,
+      childrenComment
+    }: {
+      commentId: string;
+      childrenComment: string[];
+    }) => addNestedComment(commentId, childrenComment),
+    onSuccess: (data) => {
+      queryClient.invalidateQueries({
+        queryKey: [QUERY_KEYS.GET_COMMENTS, data?.$id],
+      });
+      queryClient.invalidateQueries({
+        queryKey: [QUERY_KEYS.GET_POST_COMMENTS],
+      });
+      queryClient.invalidateQueries({
+        queryKey: [QUERY_KEYS.GET_POSTS],
+      });
+      queryClient.invalidateQueries({
+        queryKey: [QUERY_KEYS.GET_CURRENT_USER],
+      });
+    },
+  });
+  };

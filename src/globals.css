@@ -246,7 +246,7 @@
   }
 
   .comments-container {
-    @apply custom-scrollbar overflow-y-auto h-auto max-h-44  w-full
+    @apply custom-scrollbar overflow-y-auto h-auto max-h-44 lg:h-44 w-full
   }
   .comments-dialog {
     @apply custom-scrollbar overflow-y-auto w-full h-auto max-h-80

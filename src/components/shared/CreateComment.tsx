@@ -5,9 +5,10 @@ import { Models } from "appwrite";
 interface CommentProps {
   userId: string;
   post?: Models.Document;
+  parentCommentId?: string;
 }
 
-const CreateComment = ({ userId, post }: CommentProps) => {
+const CreateComment = ({ userId, post, parentCommentId }: CommentProps) => {
   const { data: currentUser } = useGetUserById(userId);
   return (
     <div className="z-20 flex items-center justify-between">
@@ -17,7 +18,7 @@ const CreateComment = ({ userId, post }: CommentProps) => {
           alt="user"
           className="max-h-10 min-w-10 rounded-full object-cover"
         />
-        <CommentForm postId={post?.$id} />
+        <CommentForm postId={post?.$id} parentCommentID={parentCommentId} />
       </div>
     </div>
   );

@@ -67,7 +67,7 @@ const PostCard = ({ post }: PostCardProps) => {
         />
       </Link>
       <PostStats post={post} userId={user.id} showName={true} />
-      {post.comments.length > 0 && <div className="comments-container">
+      {post.comments.length > 0 && <div className="comments-container bg-dark-2 mt-5">
         <ShowComments postId={post.$id} />
       </div>}
       <CreateComment userId={user.id} post={post} />
