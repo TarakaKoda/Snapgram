@@ -827,7 +827,7 @@ Assets used in the project are [here](https://drive.google.com/file/d/13_7FofRAC
     <tr align="center">
       <td>
         <p align="left">Mobile View 📱</p>
-        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/33c00014-a179-488e-b69c-b8d0882a59bb" alt="Saving a Post Mobile View" class="img-fluid">
+        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/df081ddb-4d8d-4fe4-af2b-a0429aa78c08" alt="Saving a Post Mobile View" class="img-fluid">
       </td>
       <td>
         <p align="left">Tablet View 📱</p>
