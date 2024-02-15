@@ -724,21 +724,27 @@ Assets used in the project are [here](https://drive.google.com/file/d/13_7FofRAC
 ## <a name="screenshots"> 📸 Screenshots </a>
 
 <div align="center">
-  <table>
+<table>
+  <tr>
+    <th colspan="2">📄 SIGN UP PAGE</th>
+  </tr>
     <tr>
-      <th colspan="2">📄 SIGN UP PAGE</th>
-    </tr>
-    <tr>
-      <td>
-        <p align="left">Desktop View 💻</p>
-        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/057b6e3f-295e-467f-a2bb-3ac1672f8b54" alt="Signup Page" height="300">
-      </td>
-      <td>
-        <p align="left">Mobile View 📱</p>
-        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/ade655d8-ea27-4038-b3be-e498183cd01c" alt="Signup Page Mobile View" height="300">
-      </td>
-    </tr>
-  </table>
+    <td colspan="2">
+      <p align="left">Desktop View 💻</p>
+      <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/057b6e3f-295e-467f-a2bb-3ac1672f8b54" alt="Signup Page" class="img-fluid">
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p align="left">Tablet View 📱</p>
+      <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/61cb553a-841f-483c-97b2-72cb9fcfc247" alt="Signup Page" class="img-fluid">
+    </td>
+    <td>
+      <p align="left">Mobile View 📱</p>
+      <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/b9c74841-4c0c-464a-aa8e-10be519b5810" alt="Signup Page Mobile View"  class="img-fluid">
+    </td>
+  </tr>
+</table>
   <br />
 </div>
 <div align="center">
@@ -747,13 +753,19 @@ Assets used in the project are [here](https://drive.google.com/file/d/13_7FofRAC
       <th colspan="2">📃 SIGN IN PAGE</th>
     </tr>
     <tr>
-      <td>
+      <td colspan="2">
         <p align="left">Desktop View 💻</p>
-        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/889d55ce-9c00-4c38-91eb-6c736163e0a9" alt="Sign in Page" height="300">
+        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/889d55ce-9c00-4c38-91eb-6c736163e0a9" alt="Sign in Page"  class="img-fluid">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p align="left">Tablet View 📱</p>
+        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/24cca89f-a462-4a74-94df-9f7d61f9a1a5" alt="Sign in Page"  class="img-fluid">
       </td>
       <td>
         <p align="left">Mobile View 📱</p>
-        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/a48e1588-c305-4941-bf49-b08ca020aaf2" alt="Sign in Page Mobile view" height="300">
+        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/2fd7f796-34e3-49f7-87ed-4fcb6d36eb80" alt="Sign in Page Mobile view"  class="img-fluid">
       </td>
     </tr>
   </table>
@@ -767,17 +779,17 @@ Assets used in the project are [here](https://drive.google.com/file/d/13_7FofRAC
     <tr align="center">
       <td colspan="2">
         <p align="left">Desktop View 💻</p>
-        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/49d037ec-8dec-4c6d-8d96-c1e47afc214b" alt="Home Page Desktop View" height="400" width="800">
+        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/49d037ec-8dec-4c6d-8d96-c1e47afc214b" alt="Home Page Desktop View"  class="img-fluid">
       </td>
     </tr>
     <tr align="center">
       <td>
         <p align="left">Tablet View 📱</p>
-        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/492979af-c7fb-4ea8-be6f-028cc2f6f89b" alt="Home Page Tablet View" height="400" width="500">
+        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/492979af-c7fb-4ea8-be6f-028cc2f6f89b" alt="Home Page Tablet View" class="img-fluid">
       </td>
       <td>
         <p align="left">Mobile View 📱</p>
-        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/5b31c399-2f36-4dd0-aed7-879da6edd8e5" alt="Home Page Mobile View" height="400" width="200">
+        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/5b31c399-2f36-4dd0-aed7-879da6edd8e5" alt="Home Page Mobile View"  class="img-fluid">
       </td>
     </tr>
   </table>
@@ -791,17 +803,17 @@ Assets used in the project are [here](https://drive.google.com/file/d/13_7FofRAC
     <tr align="center">
       <td>
         <p align="left">Mobile View 📱</p>
-        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/f4e5c290-a9f5-4cab-969f-70a24ec23e7a" alt="Post Mobile View" height="500" width="250">
+        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/f4e5c290-a9f5-4cab-969f-70a24ec23e7a" alt="Post Mobile View"  class="img-fluid">
       </td>
       <td>
         <p align="left">Tablet View 📱</p>
-        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/0a98187d-72d1-4e53-82fb-49079898a14b" alt="Liked Post Tablet View" height="500" width="400">
+        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/0a98187d-72d1-4e53-82fb-49079898a14b" alt="Liked Post Tablet View"  class="img-fluid">
       </td>
     </tr>
     <tr align="center">
       <td colspan="2">
         <p align="left">Desktop View 💻</p>
-        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/d4b57239-3847-488b-8960-473cecf3f71b" alt="All Users who liked the post Desktop View" height="400" width="800">
+        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/d4b57239-3847-488b-8960-473cecf3f71b" alt="All Users who liked the post Desktop View"  class="img-fluid">
       </td>
     </tr>
   </table>
@@ -815,17 +827,17 @@ Assets used in the project are [here](https://drive.google.com/file/d/13_7FofRAC
     <tr align="center">
       <td>
         <p align="left">Mobile View 📱</p>
-        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/33c00014-a179-488e-b69c-b8d0882a59bb" alt="Saving a Post Mobile View" height="500" width="250">
+        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/33c00014-a179-488e-b69c-b8d0882a59bb" alt="Saving a Post Mobile View" class="img-fluid">
       </td>
       <td>
         <p align="left">Tablet View 📱</p>
-        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/ee340693-501a-4c93-8a5a-fa29187da59f" alt="Saved Post Tablet View" height="500" width="400">
+        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/ee340693-501a-4c93-8a5a-fa29187da59f" alt="Saved Post Tablet View"  class="img-fluid">
       </td>
     </tr>
     <tr align="center">
       <td colspan="2">
         <p align="left">Desktop View 💻</p>
-        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/ee58bb97-c573-40f4-a260-a661423ef839" alt="Saved Posts Page Desktop View" height="400" width="800">
+        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/ee58bb97-c573-40f4-a260-a661423ef839" alt="Saved Posts Page Desktop View"  class="img-fluid">
       </td>
     </tr>
   </table>
@@ -839,17 +851,17 @@ Assets used in the project are [here](https://drive.google.com/file/d/13_7FofRAC
     <tr align="center">
       <td colspan="2">
         <p align="left">Desktop View 💻</p>
-        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/a80db91a-d179-4be0-a7cf-28836d930162" alt="Post details Desktop View" height="400" width="800">
+        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/a80db91a-d179-4be0-a7cf-28836d930162" alt="Post details Desktop View"  class="img-fluid">
       </td>
     </tr>
     <tr align="center">
       <td>
         <p align="left">Tablet View 📱</p>
-        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/7863fbc3-f5fb-49ff-9651-05daedbc1ba1" alt="Post Details Tablet View" height="500" width="400">
+        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/7863fbc3-f5fb-49ff-9651-05daedbc1ba1" alt="Post Details Tablet View" class="img-fluid">
       </td>
       <td>
         <p align="left">Mobile View 📱</p>
-        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/96129d39-5b17-4c01-807a-c1f87c295336" alt="Post Details Mobile View" height="500" width="250">
+        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/96129d39-5b17-4c01-807a-c1f87c295336" alt="Post Details Mobile View" class="img-fluid">
       </td>
     </tr>
   </table>
@@ -863,17 +875,17 @@ Assets used in the project are [here](https://drive.google.com/file/d/13_7FofRAC
     <tr align="center">
       <td colspan="2">
         <p align="left">Desktop View 💻</p>
-        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/6a7d45da-63c5-49aa-ba31-d8062ad7e77c" alt="Profile Desktop View" height="400" width="800">
+        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/6a7d45da-63c5-49aa-ba31-d8062ad7e77c" alt="Profile Desktop View"  class="img-fluid">
       </td>
     </tr>
     <tr align="center">
       <td>
         <p align="left">Mobile View 📱</p>
-        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/9ef9cf96-6f01-417a-98d5-8ff17a1c06ba" alt="Profile Mobile View" height="500" width="250">
+        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/9ef9cf96-6f01-417a-98d5-8ff17a1c06ba" alt="Profile Mobile View" class="img-fluid">
       </td>
       <td>
         <p align="left">Tablet View 📱</p>
-        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/4d0c7041-2cf5-4797-aed6-7909fcee01b1" alt="Edit Profile Tablet View" height="500" width="400">
+        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/4d0c7041-2cf5-4797-aed6-7909fcee01b1" alt="Edit Profile Tablet View"  class="img-fluid">
       </td>
     </tr>
   </table>
@@ -887,17 +899,17 @@ Assets used in the project are [here](https://drive.google.com/file/d/13_7FofRAC
     <tr align="center">
       <td>
         <p align="left">Mobile View 📱</p>
-        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/f2b0a053-9e52-4c70-8187-05e58be382da" alt="All Users Mobile View" height="500" width="230">
+        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/f2b0a053-9e52-4c70-8187-05e58be382da" alt="All Users Mobile View"  class="img-fluid">
       </td>
       <td>
         <p align="left">Tablet View 📱</p>
-        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/a788d633-7a22-4751-bd17-12cc5f118af1" alt="All Users Tablet View" height="500" width="400">
+        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/a788d633-7a22-4751-bd17-12cc5f118af1" alt="All Users Tablet View" class="img-fluid">
       </td>
     </tr>
     <tr align="center">
       <td colspan="2">
         <p align="left">Desktop View 💻</p>
-        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/e62fcf60-475b-43a0-a7d7-429bd3f7074f" alt="All Users Desktop View" height="400" width="800">
+        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/e62fcf60-475b-43a0-a7d7-429bd3f7074f" alt="All Users Desktop View"  class="img-fluid">
       </td>
     </tr>
   </table>
@@ -911,20 +923,19 @@ Assets used in the project are [here](https://drive.google.com/file/d/13_7FofRAC
     <tr align="center">
       <td>
         <p align="left">Mobile View 📱</p>
-        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/cfb28a2a-2b3d-4216-8e98-98d4d2e66524" alt="Create Post Mobile View" height="500" width="230">
+        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/cfb28a2a-2b3d-4216-8e98-98d4d2e66524" alt="Create Post Mobile View"  class="img-fluid">
       </td>
       <td>
         <p align="left">Tablet View 📱</p>
-        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/171a3e9e-a4e0-47fb-9f7a-e5b16bf20327" alt="Create Post Tablet View" height="500" width="400">
+        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/171a3e9e-a4e0-47fb-9f7a-e5b16bf20327" alt="Create Post Tablet View"  class="img-fluid">
       </td>
     </tr>
     <tr align="center">
       <td colspan="2">
         <p align="left">Desktop View 💻</p>
-        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/d73c9629-a483-41ee-8ba6-7cc4e50e479a" alt="Update Post Desktop View" height="500" width="800">
+        <img src="https://github.com/TarakaKoda/Snapgram/assets/122253973/d73c9629-a483-41ee-8ba6-7cc4e50e479a" alt="Update Post Desktop View" class="img-fluid">
       </td>
     </tr>
   </table>
   <br />
 </div>
-
