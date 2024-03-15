@@ -46,7 +46,7 @@ Explore social media with this user-friendly platform that has a nice look and l
 
 👉 **Explore Page**: Homepage for users to explore posts, with a featured section for top creators
 
-👉 **Like and Save Functionality**: Enable users to like and save posts, with dedicated pages for managing liked and saved content
+👉 **Like, Comment and Save Functionality**: Enable users to like Additionally, introduced a new comment feature to enhance user interaction and save posts, with dedicated pages for managing liked and saved content
 
 👉 **Detailed Post Page**: A detailed post page displaying content and related posts for an immersive user experience
 
@@ -82,7 +82,6 @@ Make sure you have the following installed on your machine:
 
 ```bash
 git clone https://github.com/TarakaKoda/Snapgram.git
-cd Snapgram
 ```
 
 **Installation**
@@ -105,6 +104,7 @@ VITE_APPWRITE_STORAGE_ID=
 VITE_APPWRITE_USER_COLLECTION_ID=
 VITE_APPWRITE_POST_COLLECTION_ID=
 VITE_APPWRITE_SAVES_COLLECTION_ID=
+VITE_APPWRITE_COMMENT_COLLECTION_ID =
 ```
 
 Replace the placeholder values with your actual Appwrite credentials. You can obtain these credentials by signing up on the [Appwrite website](https://appwrite.io/).

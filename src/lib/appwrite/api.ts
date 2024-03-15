@@ -10,6 +10,7 @@ import { account, appwriteConfig, avatars, storage, databases } from "./config";
 
 export async function createUserAccount(user: INewUser) {
   try {
+    
     const newAccount = await account.create(
       ID.unique(),
       user.email,

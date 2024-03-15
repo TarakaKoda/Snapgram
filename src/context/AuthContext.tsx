@@ -31,6 +31,7 @@ const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 
   const checkAuthUser = async () => {
     try {
+      setIsLoading(true);
       const currentAccount = await getCurrentUser();
       if (currentAccount) {
         setUser({
@@ -79,4 +80,3 @@ const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 export default AuthProvider;
 
 export const useUserContext = () => useContext(AuthContext);
-

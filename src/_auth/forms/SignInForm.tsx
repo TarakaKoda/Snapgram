@@ -41,7 +41,7 @@ const SignInForm = () => {
     });
 
     if (!session) {
-      return toast({ title: "Sign in failed. Please try again." });
+      return toast({ title: " Oops! Sign in failed. Incorrect email or password. Please try again." });
     }
 
     const isLoggedIn = await checkAuthUser();
