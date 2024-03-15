@@ -189,7 +189,8 @@ export const useGetPosts = () => {
     queryKey: [QUERY_KEYS.GET_INFINITE_POSTS, QUERY_KEYS.GET_POST_COMMENTS],
     queryFn: getInfinitePosts as any,
     getNextPageParam: (lastPage: any) => {
-      if (lastPage && lastPage.documents.length === 0) return null;
+      if (lastPage && lastPage.documents && lastPage.documents.length === 0)
+        return null;
 
       const lastId = lastPage.documents[lastPage.documents.length - 1].$id;
       return lastId;
@@ -219,7 +220,8 @@ export const useGetInfiniteUsers = () => {
     queryFn: getInfiniteUsers as any,
     queryKey: [QUERY_KEYS.GET_INFINITE_USERS],
     getNextPageParam: (lastPage: any) => {
-      if (lastPage && lastPage.documents.length === 0) return null;
+      if (lastPage && lastPage.documents && lastPage.documents.length === 0)
+        return null;
       const lastId = lastPage.documents[lastPage.documents.length - 1].$id;
       return lastId;
     },
@@ -232,7 +234,8 @@ export const useGetInfiniteSavedPosts = () => {
     queryKey: [QUERY_KEYS.GET_INFINITE_SAVED_POSTS],
     queryFn: getInfiniteSavedPosts as any,
     getNextPageParam: (lastPage: any) => {
-      if (lastPage && lastPage.documents.length === 0) return null;
+      if (lastPage && lastPage.documents && lastPage.documents.length === 0)
+        return null;
       const lastId = lastPage.documents[lastPage.documents.length - 1].$id;
       return lastId;
     },
@@ -333,7 +336,7 @@ export const useNestedComment = () => {
   return useMutation({
     mutationFn: ({
       commentId,
-      childrenComment
+      childrenComment,
     }: {
       commentId: string;
       childrenComment: string[];
@@ -353,4 +356,4 @@ export const useNestedComment = () => {
       });
     },
   });
-  };
+};
